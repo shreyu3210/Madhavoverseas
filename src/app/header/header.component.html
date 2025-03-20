@@ -1,0 +1,51 @@
+<header id="site-header" class="fixed-top">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg stroke">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" routerLink="/">
+        <img src="assets/images/lg.png" alt="Your logo" title="Your logo" />
+      </a>
+
+      <!-- Navbar Toggler Button -->
+      <button class="navbar-toggler collapsed" type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarTogglerDemo02" 
+        aria-controls="navbarTogglerDemo02" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+
+      <!-- Navigation in the middle -->
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item" [ngClass]="{'active': isActive('/')}">
+            <a class="nav-link" routerLink="/" (click)="closeMenu()">Home <span class="sr-only" *ngIf="isActive('/')">(current)</span></a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': isActive('/about')}">
+            <a class="nav-link" routerLink="/about" (click)="closeMenu()">About Us</a>
+          </li>
+          <li class="nav-item dropdown" [ngClass]="{'active': isActive('/australia') || isActive('/uk')}">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton1" 
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Countries
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" routerLink="soon" (click)="closeMenu()">Australia</a></li>
+              <!-- <li><a class="dropdown-item" routerLink="/canada" (click)="closeMenu()">Canada</a></li> -->
+              <li><a class="dropdown-item" routerLink="uk" (click)="closeMenu()">UK</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': isActive('/language-requirement')}">
+            <a class="nav-link" routerLink="language-requirement" (click)="closeMenu()">Language Requirement</a>
+          </li>
+        </ul>
+        
+        <!-- Button moved inside navbar-collapse for mobile -->
+        <div class="d-flex contact-btn">
+          <a (click)="closeMenu()"><button   routerLink="/contact" class="btn btn-style btn-secondary">Get In Touch</button> </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

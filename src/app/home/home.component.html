@@ -1,0 +1,128 @@
+<section class="w3l-main-slider" id="home">
+    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button *ngFor="let img of carouselImages; let i = index"
+                type="button" data-bs-target="#carouselExample" 
+                [attr.data-bs-slide-to]="i" [ngClass]="{'active': i === 0}"></button>
+      </div>
+  
+      <!-- Carousel Images -->
+      <div class="carousel-inner">
+        <div *ngFor="let image of carouselImages; let i = index" 
+             class="carousel-item" [ngClass]="{'active': i === 0}">
+          <img [src]="image.src" class="d-block w-100 grain-overlay" [alt]="image.alt">
+        </div>
+      </div>
+  
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+  
+  
+
+<!-- Why Choose Us Section -->
+<section class="w3l-content-6 py-5">
+    <div class="container py-lg-5">
+        <div class="row">
+            <div class="col-lg-6 content-6-left pr-lg-5">
+                <h6 class="sub-title">Why Choose Us?</h6>
+                <img src="assets/images/choose us.png" class="img-fluid" alt="Why Choose Us">
+            </div>
+            <div class="col-lg-6 content-6-right mt-lg-0 mt-4">
+                <div class="my_slide">
+                    <p class="mb-3 text-justify">
+                        At <strong>Madhav Overseas</strong>, we are committed to shaping the dreams of countless individuals seeking to embark on a journey of higher education abroad. Founded and directed by Dhaval Joshi, a visionary in the field of overseas education, our company stands as a guiding light for students aspiring to broaden their horizons.
+                        <span *ngIf="!showMore" id="dots">...</span>
+                        <span *ngIf="showMore" id="more">
+                            Our primary goal is to facilitate and simplify the complex process of studying abroad. We understand that pursuing education in a foreign country is life-changing, and our mission is to provide comprehensive support at every step, making the process as smooth and stress-free as possible.
+                        </span>
+                    </p>
+                    <button class="btn btn-style btn-secondary" (click)="toggleReadMore()" id="myBtn">
+                        {{ showMore ? 'Read less' : 'Read more' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="w3l-stats py-5" id="stats">
+    <div class="gallery-inner container py-lg-0 py-3">
+        <div class="row stats-con pb-lg-3">
+            <div *ngFor="let stat of animatedStats" class="col-lg-3 col-6 stats_info counter_grid">
+                <p class="counter">{{ stat.value }}</p>
+                <h4>{{ stat.label }}</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Destinations Section -->
+<section class="w3l-grids-3 py-5">
+    <div class="container py-md-5">
+        <div class="title-content text-left mb-lg-5 mb-4">
+            <h6 class="sub-title">Popular</h6>
+            <h3 class="hny-title">Study Destinations</h3>
+        </div>
+        <div class="row bottom-ab-grids bg-white ">
+            <div class="hny-three-grids py-5">
+                <div class="container py-lg-5">
+                    <div class="row">
+                        <div *ngFor="let destination of destinations" class="col-md-6 col-sm-6 grids5-info">
+                            <a href="#url">
+                                <img src={{destination.image}} class="img-fluid img-flood" alt="">
+                            </a>
+                            <h5 class="sub-title">Study In</h5>
+                            <h4><a href="#url" class="hny-title">{{ destination.country }}</a></h4>
+                            <p>{{ destination.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="w3l-clients" id="clients">
+    <div class="cusrtomer-layout py-5">
+        <div class="container py-lg-4 py-md-3 pb-lg-0">
+            <div class="heading text-center mx-auto">
+                <h6 class="sub-title text-center">Client Reviews:</h6>
+                <h3 class="hny-title mb-md-5 mb-4"> The Best Way to Learn About Our Company.</h3>
+            </div>
+            
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" >
+              <div class="carousel-inner">
+                <div *ngFor="let review of reviews; let i = index" class="carousel-item" [class.active]="i === 0">
+                  <div class="testimonial-content text-center">
+                    <blockquote>
+                      <span class="fa fa-quote-left" aria-hidden="true"></span>
+                      {{ review.text }}
+                    </blockquote>
+                    <div class="testi-des">
+                      <div class="test-img">
+                        <img src="assets/images/testimonial-1.png" class="img-fluid" alt="client-img">
+                      </div>
+                      <div class="peopl align-self">
+                        <h3>{{ review.name }}</h3>
+                        <p><b><a [href]="review.link" target="_blank">Read more</a></b></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>

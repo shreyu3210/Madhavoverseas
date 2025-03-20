@@ -1,0 +1,101 @@
+.scroll-to-top {
+  position: fixed;
+  bottom:90px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999; /* Increased z-index */
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+  content: 'To the top';
+}
+.what{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2bbe41;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999; /* Increased z-index to maximum */
+}
+
+.what:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; /* Ensure visibility */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-wrapper {
+    
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Lower z-index than fixed elements */
+  }
+  .main{
+    position: sticky;
+    z-index: 9999; /* Ensure main container has high z-index */
+  }
+
+/* Media query to adjust position on smaller screens */
+@media (max-width: 768px) {
+  .what {
+    bottom: 30px;
+    right: 20px;
+  }
+  
+  .scroll-to-top {
+    bottom: 100px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-btn {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+  .navbar-collapse {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    flex-direction: column;
+  }
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .contact-btn {
+    margin-top: 15px;
+    width: 100%;
+    order: 2; /* Ensures it appears after nav items */
+  }
+}
