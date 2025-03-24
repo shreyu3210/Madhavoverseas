@@ -4,13 +4,45 @@
   <router-outlet></router-outlet>
 </div>
 <div class="main">
+  
+  <button 
+    class="chatbot-btn"
+    (click)="toggleChatbot()" 
+    aria-label="Open Chatbot">
+    <i class="fas fa-robot"></i>
+  </button>
+  
+  <!-- Chatbot popup container -->
+  <div class="chatbot-container" *ngIf="showChatbot">
+    <div class="chatbot-header">
+      <h3>Madhav Overseas Chat</h3>
+      <button class="close-btn" (click)="toggleChatbot()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chatbot-messages" #chatMessagesRef>
+      <div *ngFor="let message of chatMessages" [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+        {{ message.text }}
+      </div>
+    </div>
+    <div class="chatbot-input">
+      <input 
+        type="text" 
+        [(ngModel)]="userMessage" 
+        placeholder="Type your question..."
+        (keyup.enter)="sendMessage()">
+      <button (click)="sendMessage()">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
  
-   <a
+  <a
     aria-label="Chat on WhatsApp"
     href="https://wa.me/7778832033"
     target="_blank"
   >
-  <button class="fa-brands fa-whatsapp  what"></button>
+  <button class="fa-brands fa-whatsapp what"></button>
   </a>
   
   <button

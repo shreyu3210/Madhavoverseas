@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SoonComponent } from './soon/soon.component';
 import { LanguagerequirementComponent } from './languagerequirement/languagerequirement.component';
 import { UkComponent } from './uk/uk.component';
+import { CountriesComponent } from './countries/countries.component';
 // import { LanguageRequirementComponent } from './components/language-requirement/language-requirement.component';
 // import { BecomePartnerComponent } from './components/become-partner/become-partner.component';
 // import { AustraliaComponent } from './components/countries/australia.component';
@@ -18,13 +19,13 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'soon', component: SoonComponent },
   { path: 'language-requirement', component: LanguagerequirementComponent },
-  { path: 'uk', component: UkComponent },
-  // { path: 'language-requirement', component: LanguageRequirementComponent },
-  // { path: 'become-partner', component: BecomePartnerComponent },
-  // { path: 'australia', component: AustraliaComponent },
-  // { path: 'canada', component: CanadaComponent },
-  // { path: 'uk', component: UKComponent },
-  // { path: 'usa', component: USAComponent },
+  
+  // New dynamic country routes
+  { path: 'countries/:countryCode', component: CountriesComponent },
+  
+  // Keep old routes temporarily for backward compatibility
+  { path: 'uk', redirectTo: 'countries/uk', pathMatch: 'full' },
+  
   { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect unknown routes to home
 ];
 @NgModule({

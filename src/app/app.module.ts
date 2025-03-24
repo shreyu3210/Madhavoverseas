@@ -13,6 +13,8 @@ import { FaqComponent } from './faq/faq.component';
 import { SoonComponent } from './soon/soon.component';
 import { LanguagerequirementComponent } from './languagerequirement/languagerequirement.component';
 import { UkComponent } from './uk/uk.component';
+import { CountriesComponent } from './countries/countries.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,15 @@ import { UkComponent } from './uk/uk.component';
     FaqComponent,
     SoonComponent,
     LanguagerequirementComponent,
-    UkComponent
+    UkComponent,
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([]),
     FormsModule,
-    AppRoutingModule
-
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

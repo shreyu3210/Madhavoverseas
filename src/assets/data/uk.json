@@ -1,0 +1,36 @@
+{
+  "name": "UK",
+  "slogan": "The UK is renowned for its world-class education, offering international students exceptional benefits. With numerous advantages, it’s hard to decide what’s more ",
+   
+
+  "bannerImages": [
+    {"src": "assets/images/UK/carousel_1.png", "alt": "UK University Scene"},
+    {"src": "assets/images/UK/coventry.png", "alt": "Coventry University"},
+    {"src": "assets/images/UK/carousel_1.png", "alt": "UK Campus Life"}
+  ],
+
+
+  "universities": [
+    {
+      "name": "Coventry University",
+      "image": "assets/images/UK/coventry.png",
+      "description": "The oldest university in the English-speaking world, leading in innovation.",
+      "founded": "1096",
+      "location": "Oxford, England",
+      "ranking": "Top 3"
+    },
+    {
+      "name": "Bath Spa University",
+      "image": "assets/images/UK/BathSpa.png",
+      "description": "A global leader in science, engineering, and technology education.",
+      "founded": "1907",
+      "location": "London, England",
+      "ranking": "Top 10"
+    }
+  ],
+  "benefits": "Pursuing a master's degree in just one year, equivalent to a two-year program in other countries, offers a fast-track route to higher education. Graduates can stay and work after completing their studies with a two-year work permit, providing valuable career opportunities. Top universities offer a diverse range of courses, allowing students to choose from various fields of study. Tuition fees can be paid in installments, with the option to fly after paying half, making it financially convenient. Additionally, the cost of education is more affordable compared to other countries, and numerous scholarships are available for international students. With plenty of job opportunities after graduation, studying abroad becomes a rewarding investment in the future.",
+  "callToAction": {
+    "title": "Ready to Begin Your UK Education Journey?",
+    "description": "Contact us today to learn more about studying in the UK"
+  }
+} 

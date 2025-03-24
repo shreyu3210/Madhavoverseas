@@ -1,0 +1,40 @@
+{
+  "name": "USA",
+  "slogan": "Experience academic excellence in the world's leading education system",
+  "bannerImages": [
+    {"src": "assets/images/usa/nyc-skyline.jpg", "alt": "New York City Skyline"},
+    {"src": "assets/images/usa/harvard-campus.jpg", "alt": "Harvard Campus"},
+    {"src": "assets/images/usa/golden-gate.jpg", "alt": "San Francisco Golden Gate"}
+  ],
+  "universities": [
+    {
+      "name": "Harvard University",
+      "image": "assets/images/usa/harvard.jpg",
+      "description": "An Ivy League research university with a history of excellence dating back to 1636.",
+      "founded": "1636",
+      "location": "Cambridge, Massachusetts",
+      "ranking": "Top 5"
+    },
+    {
+      "name": "Stanford University",
+      "image": "assets/images/usa/stanford.jpg",
+      "description": "A leading teaching and research institution known for entrepreneurship and innovation.",
+      "founded": "1885",
+      "location": "Stanford, California",
+      "ranking": "Top 3"
+    },
+    {
+      "name": "Massachusetts Institute of Technology",
+      "image": "assets/images/usa/mit.jpg",
+      "description": "World-renowned for leadership in science, technology, and engineering education.",
+      "founded": "1861",
+      "location": "Cambridge, Massachusetts",
+      "ranking": "Top 1"
+    }
+  ],
+  "benefits": "The USA is home to most of the world's top-ranked universities with cutting-edge facilities and resources. American universities offer a liberal arts education system that allows students to explore various subjects before choosing a major. Students have access to advanced research facilities and funding, even at the undergraduate level. After graduation, students can apply for Optional Practical Training (OPT) to work in the US for up to 3 years in STEM fields or 1 year for non-STEM disciplines. Studying in the US helps build a global network with classmates and faculty who become future leaders in various industries. American universities offer rich extracurricular activities, sports, clubs, and cultural events that enhance the student experience.",
+  "callToAction": {
+    "title": "Make America Your Classroom",
+    "description": "Let us guide you through the application process for US universities"
+  }
+} 

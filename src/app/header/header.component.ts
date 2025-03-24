@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { CountryService } from '../services/country.service';
 
 declare var bootstrap: any;
 
@@ -13,8 +14,9 @@ export class HeaderComponent {
   isMenuCollapsed = true;
   currentRoute: string = '/';
   private bsCollapse: any;
+  countries: {code: string, name: string}[] = [];
   
-  constructor(private router: Router) {
+  constructor(private router: Router, private countryService: CountryService) {
     // Subscribe to router events to update active link and close menu
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -36,6 +38,10 @@ export class HeaderComponent {
         this.bsCollapse.hide();
       }
     }, 100);
+    
+    this.countryService.getAllCountries().subscribe((data: {code: string, name: string}[]) => {
+      this.countries = data;
+    });
   }
   
   // Check if route is active

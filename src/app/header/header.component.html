@@ -25,15 +25,15 @@
           <li class="nav-item" [ngClass]="{'active': isActive('/about')}">
             <a class="nav-link" routerLink="/about" (click)="closeMenu()">About Us</a>
           </li>
-          <li class="nav-item dropdown" [ngClass]="{'active': isActive('/australia') || isActive('/uk')}">
+          <li class="nav-item dropdown" [ngClass]="{'active': isActive('/countries')}">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton1" 
               data-bs-toggle="dropdown" aria-expanded="false">
               Countries
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" routerLink="soon" (click)="closeMenu()">Australia</a></li>
-              <!-- <li><a class="dropdown-item" routerLink="/canada" (click)="closeMenu()">Canada</a></li> -->
-              <li><a class="dropdown-item" routerLink="uk" (click)="closeMenu()">UK</a></li>
+              <li *ngFor="let country of countries">
+                <a class="dropdown-item" [routerLink]="['/countries', country.code]" (click)="closeMenu()">{{country.name}}</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item" [ngClass]="{'active': isActive('/language-requirement')}">

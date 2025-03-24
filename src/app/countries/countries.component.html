@@ -1,0 +1,101 @@
+<div *ngIf="loading" class="text-center py-5">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<div *ngIf="error" class="alert alert-danger text-center my-5">
+  <h3>Error loading country data</h3>
+  <p>Please try again later or contact support if the problem persists.</p>
+</div>
+
+<div *ngIf="!loading && !error && countryData" class="country-container">
+  <!-- Banner/Carousel Section -->
+  <div class="carousel-container position-relative">
+    <div class="carousel-wrapper">
+      <div *ngFor="let image of countryData.bannerImages; let i = index" 
+          class="carousel-slide" 
+          [ngClass]="{'active': i === activeIndex}">
+        <img [src]="image.src" [alt]="image.alt" class="img-fluid w-100">
+        <div class="carousel-caption">
+          <h1>Study in {{countryData.name}}</h1>
+          <p class="lead">{{countryData.slogan}}</p>
+        </div>
+      </div>
+    </div>
+    
+    <button class="carousel-control-prev" (click)="prevSlide()">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" (click)="nextSlide()">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+    
+    <div class="carousel-indicators">
+      <button *ngFor="let image of countryData.bannerImages; let i = index" 
+              [ngClass]="{'active': i === activeIndex}"
+              (click)="setActiveSlide(i)"></button>
+    </div>
+  </div>
+  
+  <!-- Universities Section -->
+  <div class="universities-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Top Universities in {{countryData.name}}</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let university of countryData.universities">
+          <div class="card university-card">
+            <div class="card-img-wrapper">
+              <img
+                loading="lazy"
+                [src]="university.image"
+                class="card-img-top"
+                [alt]="university.name"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{university.name}}</h5>
+              <p class="card-text">{{university.description}}</p>
+              <ul class="list-unstyled">
+                <li>✓ Founded: {{university.founded}}</li>
+                <li>✓ Location: {{university.location}}</li>
+                <li>✓ World Ranking: {{university.ranking}}</li>
+              </ul>
+              <button class="btn btn-primary">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Study in Country Section -->
+  <div class="why-country-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Why Study in {{countryData.name}}?</h2>
+   
+      <!-- <div class="row g-4">
+        <div class="col-md-3" *ngFor="let benefit of countryData.benefits">
+          <div class="feature-box text-center">
+            <i class="fas {{benefit.icon}} fa-3x mb-3"></i>
+            <h4>{{benefit.title}}</h4>
+            <p>{{benefit.description}}</p>
+          </div>
+        </div>
+      </div> -->
+      <div>
+        
+        <p  class="benefit">{{countryData.benefits}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="cta-section text-center py-5 bg-primary text-white">
+    <div class="container">
+      <h2>{{countryData.callToAction.title}}</h2>
+      <p class="lead">{{countryData.callToAction.description}}</p>
+      <button class="btn btn-light btn-lg mt-3" routerLink="/contact">Get Started</button>
+    </div>
+  </div>
+</div>

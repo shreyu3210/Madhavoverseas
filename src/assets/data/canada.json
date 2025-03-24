@@ -1,0 +1,40 @@
+{
+  "name": "Canada",
+  "slogan": "World-class education with a pathway to immigration",
+  "bannerImages": [
+    {"src": "assets/images/canada/toronto-skyline.jpg", "alt": "Toronto Skyline"},
+    {"src": "assets/images/canada/ubc-campus.jpg", "alt": "UBC Campus"},
+    {"src": "assets/images/canada/montreal-winter.jpg", "alt": "Montreal Winter Scene"}
+  ],
+  "universities": [
+    {
+      "name": "University of Toronto",
+      "image": "assets/images/canada/toronto-uni.jpg",
+      "description": "Canada's top university with a strong emphasis on research and innovation.",
+      "founded": "1827",
+      "location": "Toronto, Ontario",
+      "ranking": "Top 25"
+    },
+    {
+      "name": "University of British Columbia",
+      "image": "assets/images/canada/ubc.jpg",
+      "description": "A leading global center for research and teaching with stunning campuses.",
+      "founded": "1908",
+      "location": "Vancouver, British Columbia",
+      "ranking": "Top 40"
+    },
+    {
+      "name": "McGill University",
+      "image": "assets/images/canada/mcgill.jpg",
+      "description": "One of Canada's oldest universities with a reputation for excellence.",
+      "founded": "1821",
+      "location": "Montreal, Quebec",
+      "ranking": "Top 30"
+    }
+  ],
+  "benefits": "Studying in Canada can lead directly to permanent residency through Express Entry and Provincial Nominee Programs. Canada offers lower tuition fees compared to the US and UK with similar quality of education and global recognition. Students can work up to 20 hours per week during studies and receive a 3-year post-graduation work permit. Canada consistently ranks as one of the safest countries in the world with low crime rates and excellent healthcare. Experience a truly multicultural society that celebrates diversity and inclusion. International students can access Canada's renowned public healthcare system in most provinces.",
+  "callToAction": {
+    "title": "Start Your Canadian Journey",
+    "description": "Contact us today to explore your educational opportunities in Canada"
+  }
+} 

@@ -1,0 +1,40 @@
+{
+  "name": "Australia",
+  "slogan": "Quality education in a diverse and beautiful environment",
+  "bannerImages": [
+    {"src": "assets/images/australia/sydney-opera.jpg", "alt": "Sydney Opera House"},
+    {"src": "assets/images/australia/melbourne-uni.jpg", "alt": "University of Melbourne"},
+    {"src": "assets/images/australia/gold-coast.jpg", "alt": "Gold Coast Campus"}
+  ],
+  "universities": [
+    {
+      "name": "University of Sydney",
+      "image": "assets/images/australia/sydney-uni.jpg",
+      "description": "Australia's first university with a rich history of academic excellence and innovation.",
+      "founded": "1850",
+      "location": "Sydney, New South Wales",
+      "ranking": "Top 40"
+    },
+    {
+      "name": "University of Melbourne",
+      "image": "assets/images/australia/melbourne-uni.jpg",
+      "description": "A leading research university known for its vibrant campus life and world-class research.",
+      "founded": "1853",
+      "location": "Melbourne, Victoria",
+      "ranking": "Top 35"
+    },
+    {
+      "name": "Australian National University",
+      "image": "assets/images/australia/anu.jpg",
+      "description": "Australia's highest-ranked university, renowned for research and innovation.",
+      "founded": "1946",
+      "location": "Canberra, ACT",
+      "ranking": "Top 30"
+    }
+  ],
+  "benefits": "Australia offers a world-class education system with globally recognized qualifications. International students can work up to 20 hours per week during term and full-time during holidays. Graduates are eligible for post-study work visas for 2-4 years. Australia consistently ranks among the top countries for quality of life, safety, and happiness. Experience a welcoming, diverse society with students from over 200 countries studying in Australia. The country is a leader in research and innovation across many fields, offering cutting-edge educational experiences.",
+  "callToAction": {
+    "title": "Ready to Study in Australia?",
+    "description": "Let us help you turn your Australian education dreams into reality"
+  }
+} 
