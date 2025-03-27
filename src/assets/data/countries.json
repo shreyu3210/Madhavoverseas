@@ -2,5 +2,6 @@
   {"code": "uk", "name": "UK"},
   {"code": "australia", "name": "Australia"},
   {"code": "canada", "name": "Canada"},
-  {"code": "usa", "name": "USA"}
+  {"code": "usa", "name": "USA"},
+  {"code": "new-zealand", "name": "New Zealand"}
 ] 

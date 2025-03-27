@@ -1,22 +1,20 @@
 <!--/w3l-footer-29-main-->
-<footer>
-    <!-- footer -->
+<footer itemscope itemtype="http://schema.org/Organization">
     <section class="w3l-footer">
       <div class="w3l-footer-16-main py-5">
         <div class="container">
           <div class="row">
             <div class="col-lg-7 column">
               <div class="row">
-                <div class="col-md-4 column">
+                <nav class="col-md-4 column">
                   <h3>Useful Links</h3>
-                  <ul class="footer-gd-16">
-                    <li><a routerLink="/">Home</a></li>
-                    <li><a routerLink="/about">About Us</a></li>
-                   <li><a routerLink="/contact">Contact Us</a></li>
-                   <li><a routerLink="/">FAQs</a></li>
-                    
+                  <ul class="footer-gd-16" role="menu">
+                    <li role="menuitem"><a routerLink="/" aria-label="Home">Home</a></li>
+                    <li role="menuitem"><a routerLink="/about" aria-label="About Us">About Us</a></li>
+                    <li role="menuitem"><a routerLink="/contact" aria-label="Contact Us">Contact Us</a></li>
+                    <li role="menuitem"><a routerLink="/" aria-label="FAQs">FAQs</a></li>
                   </ul>
-                </div>
+                </nav>
                 <div class="col-md-3 column mt-md-0 mt-3">
                   <h3>Visit Us</h3>
                   <ul class="footer-gd-16">
@@ -25,13 +23,14 @@
                 </div>
                 
                 <div class="col-md-5 column mt-md-0 mt-5">
-                  <h3>Locate Us</h3>
-                  <ul class="footer-gd-16">
-                      <address>
-                    <li><p><i class="fa fa-map-marker" aria-hidden="true"></i> 201, Sangath Mall-1, Motera, Ahmedabad, Gujarat 382424</p></li>
-                    <li><p><i class="fa fa-mobile" aria-hidden="true"></i> +91-7778832033</p></li>
-                    <li><p><i class="fa fa-envelope" aria-hidden="true"></i> {{"dir.madhavoverseas@gmail.com"}}</p></li></address>
-                  </ul>
+                  <h3>Contact Information</h3>
+                  <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <ul class="footer-gd-16">
+                      <li><p><i class="fa fa-map-marker" aria-hidden="true"></i> <span itemprop="streetAddress">201, Sangath Mall-1, Motera</span>, <span itemprop="addressLocality">Ahmedabad</span>, <span itemprop="addressRegion">Gujarat</span> <span itemprop="postalCode">382424</span></p></li>
+                      <li><p><i class="fa fa-mobile" aria-hidden="true"></i> <span itemprop="telephone">+91-7778832033</span></p></li>
+                      <li><p><i class="fa fa-envelope" aria-hidden="true"></i> <span itemprop="email">dir.madhavoverseas&#64;gmail.com</span></p></li>
+                    </ul>
+                  </address>
                 </div>
               </div>
             </div>
@@ -43,7 +42,7 @@
                   <input type="email" name="email" placeholder="Email Address" required="">
                   <button type="submit">Go</button>
                 </form>
-                <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                <p>Sign up for our latest news & articles. We won't give you spam mails.</p>
               </div>
             </div>
           </div>

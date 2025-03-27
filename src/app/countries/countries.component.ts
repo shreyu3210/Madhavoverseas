@@ -59,4 +59,23 @@ export class CountriesComponent implements OnInit {
   setActiveSlide(index: number) {
     this.activeIndex = index;
   }
+
+  generateAltText(image: any): string {
+    return `${this.countryData?.name || 'Country'} - ${image.alt || 'University campus'} - Study abroad with Madhav Overseas`;
+  }
+
+  generateStructuredData() {
+    if (!this.countryData) return {};
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'EducationalOrganization',
+      'name': `Study in ${this.countryData.name} - Madhav Overseas`,
+      'description': this.countryData.slogan,
+      'address': {
+        '@type': 'PostalAddress',
+        'addressCountry': this.countryData.name
+      }
+    };
+  }
 }

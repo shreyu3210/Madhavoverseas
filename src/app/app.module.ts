@@ -10,9 +10,9 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import { FaqComponent } from './faq/faq.component';
-import { SoonComponent } from './soon/soon.component';
+
 import { LanguagerequirementComponent } from './languagerequirement/languagerequirement.component';
-import { UkComponent } from './uk/uk.component';
+
 import { CountriesComponent } from './countries/countries.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -25,9 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ContactComponent,
     FaqComponent,
-    SoonComponent,
+    
     LanguagerequirementComponent,
-    UkComponent,
+
     CountriesComponent
   ],
   imports: [

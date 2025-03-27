@@ -8,6 +8,7 @@
 .carousel-slide {
   display: none;
   position: relative;
+  
 }
 
 .carousel-slide.active {
