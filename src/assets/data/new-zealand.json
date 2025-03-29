@@ -4,9 +4,8 @@
      
   
     "bannerImages": [
-      {"src": "assets/images/UK/carousel_1.png", "alt": "UK University Scene"},
-      {"src": "assets/images/UK/coventry.png", "alt": "Coventry University"},
-      {"src": "assets/images/UK/carousel_1.png", "alt": "UK Campus Life"}
+      {"src": "assets/images/New-Zealand/carousel/NEWZ1.jpg", "alt": "UK University Scene"},
+      {"src": "assets/images/New-Zealand/carousel/NEWZ2.jpg", "alt": "Coventry University"}  
     ],
   
   

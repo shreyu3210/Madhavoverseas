@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'countries/:countryCode', component: CountriesComponent },
   
   // Keep old routes temporarily for backward compatibility
-  { path: 'uk', redirectTo: 'countries/uk', pathMatch: 'full' },
+  // { path: 'uk', redirectTo: 'countries/uk', pathMatch: 'full' },
   
   { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect unknown routes to home
 ];

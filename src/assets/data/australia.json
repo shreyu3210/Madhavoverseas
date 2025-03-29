@@ -2,9 +2,9 @@
   "name": "Australia",
   "slogan": "Quality education in a diverse and beautiful environment",
   "bannerImages": [
-    {"src": "assets/images/australia/sydney-opera.jpg", "alt": "Sydney Opera House"},
-    {"src": "assets/images/australia/melbourne-uni.jpg", "alt": "University of Melbourne"},
-    {"src": "assets/images/australia/gold-coast.jpg", "alt": "Gold Coast Campus"}
+    {"src": "assets/images/AUS/carousel/AUS1.jpg", "alt": "Sydney Opera House"},
+    {"src": "assets/images/AUS/carousel/AUS2.jpg", "alt": "University of Melbourne"}
+    
   ],
   "universities": [
     {

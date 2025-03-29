@@ -2,9 +2,8 @@
   "name": "USA",
   "slogan": "Experience academic excellence in the world's leading education system",
   "bannerImages": [
-    {"src": "assets/images/usa/nyc-skyline.jpg", "alt": "New York City Skyline"},
-    {"src": "assets/images/usa/harvard-campus.jpg", "alt": "Harvard Campus"},
-    {"src": "assets/images/usa/golden-gate.jpg", "alt": "San Francisco Golden Gate"}
+    {"src": "assets/images/USA/carousel/USA1.jpg", "alt": "New York City Skyline"},
+    {"src": "assets/images/USA/carousel/USA2.jpg", "alt": "Harvard Campus"}
   ],
   "universities": [
     {

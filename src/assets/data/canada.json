@@ -2,9 +2,9 @@
   "name": "Canada",
   "slogan": "World-class education with a pathway to immigration",
   "bannerImages": [
-    {"src": "assets/images/canada/toronto-skyline.jpg", "alt": "Toronto Skyline"},
-    {"src": "assets/images/canada/ubc-campus.jpg", "alt": "UBC Campus"},
-    {"src": "assets/images/canada/montreal-winter.jpg", "alt": "Montreal Winter Scene"}
+    {"src": "assets/images/CANADA/carousel/Canada1.jpg", "alt": "Toronto Skyline"},
+    {"src": "assets/images/CANADA/carousel/Canada2.jpg","alt": "UBC Campus"}
+    
   ],
   "universities": [
     {

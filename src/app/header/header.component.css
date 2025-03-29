@@ -72,6 +72,12 @@ ul li
     margin-top: 0;
     border: none;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: white !important;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    min-width: 200px;
 }
 
 .dropdown-item {
@@ -101,6 +107,7 @@ ul li
     
     .dropdown:hover .dropdown-menu {
         display: block;
+        background-color: white !important;
     }
 
     /* Desktop-specific button styling */
@@ -175,10 +182,10 @@ ul li
     }
     
     .dropdown-menu {
-        border: none;
+        background-color: white !important;
+        position: static;
         box-shadow: none;
         padding-left: 1rem;
-        background-color: #f8f9fa;
     }
     
     .dropdown-item {
@@ -205,4 +212,25 @@ ul li
         width: 100%;
         display: block;
     }
+}
+
+/* Add these new styles */
+.nav-item .nav-link {
+    color: #111111; /* default color */
+    transition: color 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+    color: #78D1F2; /* blue on hover */
+}
+
+/* Style for active links */
+.nav-item.active .nav-link {
+    color: #78D1F2; /* blue when active */
+    font-weight: 500; /* optional: make active links slightly bolder */
+}
+
+/* Style for active dropdown */
+.nav-item.dropdown.active .nav-link {
+    color:#78D1F2;
 }
