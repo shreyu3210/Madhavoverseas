@@ -1,6 +1,7 @@
 import { HostListener, Component, ViewChild, ElementRef } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { initFacebookPixel } from './facebookpixel';
 
 interface ChatMessage {
   text: string;
@@ -112,5 +113,9 @@ export class AppComponent {
       const element = this.chatMessagesContainer.nativeElement;
       element.scrollTop = element.scrollHeight;
     }
+  }
+
+  ngOnInit(): void {
+    initFacebookPixel('1333106824560597'); // Your Pixel ID
   }
 }
