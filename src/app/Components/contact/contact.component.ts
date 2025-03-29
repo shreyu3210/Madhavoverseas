@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { EmailService } from '../services/email.service';
+import { EmailService } from '../../services/email.service';
 
 @Component({
   selector: 'app-contact',
