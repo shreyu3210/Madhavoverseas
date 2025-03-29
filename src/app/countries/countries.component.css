@@ -2,28 +2,59 @@
 .carousel-container {
   position: relative;
   overflow: hidden;
-  max-height: 600px;
+  max-height: 90vh; /* Makes height responsive to viewport */
   margin-top: 100px;
+  width: 100%;
 }
+
 .carousel-slide {
   display: none;
   position: relative;
-  
+  width: 100%;
+  height: 90%; /* Makes height responsive to viewport */
 }
 
 .carousel-slide.active {
   display: block;
 }
 
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintains aspect ratio while covering container */
+  object-position: center; /* Centers the image */
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Optional: Add zoom effect on hover */
+.carousel-slide:hover img {
+  transform: scale(1.05); /* Adjust scale value for desired zoom level */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust the opacity (last value) as needed */
+  z-index: 1;
+}
+.carousel-caption h1,p
+{
+color: white !important;
+}
 .carousel-caption {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: white !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  z-index: 2; /* Make sure the caption appears above the overlay */
 }
+
 
 .university-card {
   height: 100%;

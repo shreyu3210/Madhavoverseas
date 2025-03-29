@@ -16,6 +16,7 @@
       <div *ngFor="let image of countryData.bannerImages; let i = index" 
           class="carousel-slide" 
           [ngClass]="{'active': i === activeIndex}">
+        <div class="overlay"></div>
         <img [src]="image.src" [alt]="image.alt" class="img-fluid w-100">
         <div class="carousel-caption">
           <h1>Study in {{countryData.name}}</h1>
