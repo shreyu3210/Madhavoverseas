@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {AboutUsComponent} from './about-us/about-us.component'
-import { ContactComponent } from './contact/contact.component';
+import {AboutUsComponent} from './Components/about-us/about-us.component'
+import { ContactComponent } from './Components//contact/contact.component';
 
 import { LanguagerequirementComponent } from './languagerequirement/languagerequirement.component';
 
-import { CountriesComponent } from './countries/countries.component';
+import { CountriesComponent } from './Components//countries/countries.component';
 // import { LanguageRequirementComponent } from './components/language-requirement/language-requirement.component';
 // import { BecomePartnerComponent } from './components/become-partner/become-partner.component';
 // import { AustraliaComponent } from './components/countries/australia.component';
