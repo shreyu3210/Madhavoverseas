@@ -37,29 +37,23 @@ export class CountriesComponent implements OnInit {
     this.loading = true;
     this.error = false;
     
-    if (!this.isSupportedCountry) {
-      // Create a "Coming Soon" placeholder data
-      this.countryData = {
-        name: this.countryCode.toUpperCase(),
-        slogan: "Coming Soon!",
-        bannerImages: [{
-          src: "assets/images/coming-soon.jpg",
-          alt: "Coming Soon"
-        }],
-        universities: [],
-        benefits: "We are working on bringing you detailed information about studying in this country. Please check back soon!",
-        callToAction: {
-          title: "Get in Touch",
-          description: "Contact us to learn more about study opportunities in this country"
-        }
-      };
-      this.loading = false;
-      return;
-    }
-    
+    // Get country data for all countries
     this.countryService.getCountryData(this.countryCode).subscribe({
       next: (data) => {
-        this.countryData = data;
+        if (!this.isSupportedCountry) {
+          // For unsupported countries, keep the banner images but show coming soon for universities
+          this.countryData = {
+            ...data,
+            universities: [],
+            benefits: "We are working on bringing you detailed information about studying in this country. Please check back soon!",
+            callToAction: {
+              title: "Get in Touch",
+              description: "Contact us to learn more about study opportunities in this country"
+            }
+          };
+        } else {
+          this.countryData = data;
+        }
         this.loading = false;
       },
       error: (err) => {

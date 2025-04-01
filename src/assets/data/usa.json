@@ -1,6 +1,6 @@
 {
   "name": "USA",
-  "slogan": "Experience academic excellence in the world's leading education system",
+  "slogan": "The USA isn’t just a study destination—it’s a launchpad for your dreams. With over 4,000 universities, world-class faculty, and cutting-edge research opportunities, you’ll gain an education that’s respected worldwide. From tech hubs like Silicon Valley to Ivy League campuses, the possibilities are endless. Plus, with access to scholarships, internships, and networking events, you’ll build a future ready for global success.",
   "bannerImages": [
     {"src": "assets/images/USA/carousel/USA1.jpg", "alt": "New York City Skyline"},
     {"src": "assets/images/USA/carousel/USA2.jpg", "alt": "Harvard Campus"}
