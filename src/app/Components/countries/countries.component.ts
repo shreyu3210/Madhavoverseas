@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CountryService } from '../../services/country.service';
-import { CountryData } from '../../interfaces/country.interface';
+import { CountryData, University } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'app-countries',
@@ -14,7 +14,8 @@ export class CountriesComponent implements OnInit {
   activeIndex = 0;
   loading = true;
   error = false;
-
+  isSupportedCountry = false;
+  expanded = this.countryData
   constructor(
     private route: ActivatedRoute,
     private countryService: CountryService
@@ -23,13 +24,38 @@ export class CountriesComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.countryCode = params['countryCode'];
+      this.isSupportedCountry = this.isCountrySupported(this.countryCode);
       this.loadCountryData();
     });
+  }
+
+  isCountrySupported(countryCode: string): boolean {
+    return ['uk', 'australia'].includes(countryCode.toLowerCase());
   }
 
   loadCountryData() {
     this.loading = true;
     this.error = false;
+    
+    if (!this.isSupportedCountry) {
+      // Create a "Coming Soon" placeholder data
+      this.countryData = {
+        name: this.countryCode.toUpperCase(),
+        slogan: "Coming Soon!",
+        bannerImages: [{
+          src: "assets/images/coming-soon.jpg",
+          alt: "Coming Soon"
+        }],
+        universities: [],
+        benefits: "We are working on bringing you detailed information about studying in this country. Please check back soon!",
+        callToAction: {
+          title: "Get in Touch",
+          description: "Contact us to learn more about study opportunities in this country"
+        }
+      };
+      this.loading = false;
+      return;
+    }
     
     this.countryService.getCountryData(this.countryCode).subscribe({
       next: (data) => {
@@ -78,4 +104,8 @@ export class CountriesComponent implements OnInit {
       }
     };
   }
+  toggleDescription(university: University) {
+    university.expanded = !university.expanded;
+  }
+  
 }

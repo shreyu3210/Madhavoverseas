@@ -11,25 +11,22 @@
       "name": "University of Toronto",
       "image": "assets/images/canada/toronto-uni.jpg",
       "description": "Canada's top university with a strong emphasis on research and innovation.",
-      "founded": "1827",
-      "location": "Toronto, Ontario",
-      "ranking": "Top 25"
+      "location": "Toronto, Canada",
+      "website": "https://www.utoronto.ca/"
     },
     {
       "name": "University of British Columbia",
       "image": "assets/images/canada/ubc.jpg",
       "description": "A leading global center for research and teaching with stunning campuses.",
-      "founded": "1908",
-      "location": "Vancouver, British Columbia",
-      "ranking": "Top 40"
+      "location": "Vancouver, Canada",
+      "website": "https://www.ubc.ca/"
     },
     {
       "name": "McGill University",
       "image": "assets/images/canada/mcgill.jpg",
       "description": "One of Canada's oldest universities with a reputation for excellence.",
-      "founded": "1821",
-      "location": "Montreal, Quebec",
-      "ranking": "Top 30"
+      "location": "Montreal, Canada",
+      "website": "https://www.mcgill.ca/"
     }
   ],
   "benefits": "Studying in Canada can lead directly to permanent residency through Express Entry and Provincial Nominee Programs. Canada offers lower tuition fees compared to the US and UK with similar quality of education and global recognition. Students can work up to 20 hours per week during studies and receive a 3-year post-graduation work permit. Canada consistently ranks as one of the safest countries in the world with low crime rates and excellent healthcare. Experience a truly multicultural society that celebrates diversity and inclusion. International students can access Canada's renowned public healthcare system in most provinces.",

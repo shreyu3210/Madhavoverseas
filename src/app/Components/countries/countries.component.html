@@ -39,8 +39,21 @@
     </div>
   </div>
   
-  <!-- Universities Section -->
-  <div class="universities-section py-5">
+  <!-- Coming Soon Message for Unsupported Countries -->
+  <div *ngIf="!isSupportedCountry" class="coming-soon-section py-5">
+    <div class="container text-center">
+      <div class="coming-soon-content">
+        <h2>Coming Soon!</h2>
+        <p class="lead">{{countryData.benefits}}</p>
+        <div class="mt-4">
+          <a routerLink="/contact" class="btn btn-primary">Contact Us for More Information</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universities Section (only show for supported countries) -->
+  <div *ngIf="isSupportedCountry" class="universities-section py-5">
     <div class="container">
       <h2 class="text-center mb-5">Top Universities in {{countryData.name}}</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -54,15 +67,21 @@
                 [alt]="university.name"
               />
             </div>
-            <div class="card-body">
-              <h5 class="card-title">{{university.name}}</h5>
-              <p class="card-text">{{university.description}}</p>
+            <div class="card-body text-center">
+              <h3 class="card-title">{{university.name}}</h3>
+              <div class="description-container">
+                <p class="card-text" [ngClass]="{'collapsed': !university.expanded}">{{university.description}}</p>
+                <a class="read-more" (click)="toggleDescription(university)" *ngIf="!university.expanded">...Read more</a>
+                <a class="read-less" (click)="toggleDescription(university)" *ngIf="university.expanded">Show less</a>
+              </div>
+              <br>
               <ul class="list-unstyled">
-                <li>✓ Founded: {{university.founded}}</li>
-                <li>✓ Location: {{university.location}}</li>
-                <li>✓ World Ranking: {{university.ranking}}</li>
+             
+                <h4>  Location: {{university.location}}</h4>
+               
               </ul>
-              <button class="btn btn-primary">Learn More</button>
+              <br>
+              <a [href]="university.website || '#'" target="_blank" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -70,8 +89,8 @@
     </div>
   </div>
 
-  <!-- Why Study in Country Section -->
-  <div class="why-country-section py-5 bg-light">
+  <!-- Why Study in Country Section (only show for supported countries) -->
+  <div *ngIf="isSupportedCountry" class="why-country-section py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-5">Why Study in {{countryData.name}}?</h2>
    
@@ -84,19 +103,12 @@
           </div>
         </div>
       </div> -->
-      <div>
-        
-        <p  class="benefit">{{countryData.benefits}}</p>
+      <div class="benefit-wrapper">
+        <p class="benefit">{{countryData.benefits}}</p>
       </div>
     </div>
   </div>
 
   <!-- Call to Action Section -->
-  <div class="cta-section text-center py-5 bg-primary text-white">
-    <div class="container">
-      <h2>{{countryData.callToAction.title}}</h2>
-      <p class="lead">{{countryData.callToAction.description}}</p>
-      <button class="btn btn-light btn-lg mt-3" routerLink="/contact">Get Started</button>
-    </div>
-  </div>
+ 
 </div>

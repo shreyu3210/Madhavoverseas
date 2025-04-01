@@ -11,12 +11,13 @@
     (click)="toggleChatbot()" 
     aria-label="Open Chatbot">
     <i class="fas fa-robot"></i>
+    <span class="tooltip">Vani <br>is ready to <br>assist you!</span>
   </button>
   
   <!-- Chatbot popup container -->
   <div class="chatbot-container" *ngIf="showChatbot">
     <div class="chatbot-header">
-      <h3 style="color: white;">Madhav Overseas Assistant
+      <h3 style="color: white;">Assistant Vani
       </h3>
       <button class="close-btn" (click)="toggleChatbot()">
         <i class="fas fa-times"></i>
@@ -27,6 +28,23 @@
         {{ message.text }}
       </div>
     </div>
+    
+    <!-- Quick question cards -->
+    <div class="quick-questions" *ngIf="showQuickQuestions">
+      <div class="question-card" (click)="selectQuickQuestion('Who is your founder?')">
+        Who is your founder?
+      </div>
+      <div class="question-card" (click)="selectQuickQuestion('Why should I choose you?')">
+        Why should I choose you?
+      </div>
+      <div class="question-card" (click)="selectQuickQuestion('What makes you different from others?')">
+        What makes you different?
+      </div>
+      <div class="question-card" (click)="selectQuickQuestion('How can I contact you?')">
+        How can I contact you?
+      </div>
+    </div>
+    
     <div class="chatbot-input">
       <input 
         type="text" 

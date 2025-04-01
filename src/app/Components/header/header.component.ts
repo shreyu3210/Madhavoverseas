@@ -15,6 +15,7 @@ export class HeaderComponent {
   currentRoute: string = '/';
   private bsCollapse: any;
   countries: {code: string, name: string}[] = [];
+  isDropdownOpen = false;
   
   constructor(private router: Router, private countryService: CountryService) {
     // Subscribe to router events to update active link and close menu
@@ -57,7 +58,17 @@ export class HeaderComponent {
   clickout(event: any) {
     const navbarCollapse = document.getElementById('navbarTogglerDemo02');
     const navbarToggler = document.querySelector('.navbar-toggler');
+    const dropdown = document.querySelector('.dropdown-menu');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
     
+    // Close dropdown when clicking outside
+    if (dropdown && dropdownToggle && 
+        !dropdown.contains(event.target) && 
+        !dropdownToggle.contains(event.target)) {
+      this.isDropdownOpen = false;
+    }
+
+    // Existing menu close logic
     if (navbarCollapse && navbarToggler && 
         !navbarCollapse.contains(event.target) && 
         !navbarToggler.contains(event.target) &&
@@ -75,6 +86,11 @@ export class HeaderComponent {
         toggler.click();
       }
     }
+    // Close dropdown when menu closes
+    this.isDropdownOpen = false;
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      menu.classList.remove('show');
+    });
   }
 
   // Toggle menu
@@ -86,5 +102,35 @@ export class HeaderComponent {
         this.bsCollapse.show();
       }
     }
+  }
+
+  // Add new method to toggle dropdown
+  toggleDropdown(event: Event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    // Toggle dropdown state
+    this.isDropdownOpen = !this.isDropdownOpen;
+    
+    // Get dropdown menu element
+    const dropdownMenu = (event.target as HTMLElement)
+      .closest('.dropdown')
+      ?.querySelector('.dropdown-menu');
+    
+    if (dropdownMenu) {
+      if (this.isDropdownOpen) {
+        dropdownMenu.classList.add('show');
+      } else {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+  }
+
+  isCountryEnabled(countryCode: string): boolean {
+    return true; // Enable all countries
+  }
+
+  handleCountryClick(event: Event, countryCode: string) {
+    this.closeMenu();
   }
 }

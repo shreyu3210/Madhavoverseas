@@ -1,6 +1,6 @@
 {
   "name": "UK",
-  "slogan": "The UK is renowned for its world-class education, offering international students exceptional benefits. With numerous advantages, it’s hard to decide what’s more ",
+  "slogan": "The UK is renowned for its world-class education, offering international students exceptional benefits. With numerous advantages, it's hard to decide what's more ",
    
 
   "bannerImages": [
@@ -11,21 +11,27 @@
 
   "universities": [
     {
-      "name": "Coventry University",
-      "image": "assets/images/UK/coventry.png",
-      "description": "The oldest university in the English-speaking world, leading in innovation.",
-      "founded": "1096",
-      "location": "Oxford, England",
-      "ranking": "Top 3"
+      "name": "University of Cambridge",
+      "image": "assets/images/UK/university/Cambridge University.jpg",
+      "description": "Global Rankings – The University of Cambridge is ranked 5th in QS World University Rankings 2025 and 5th in Times Higher Education (THE) 2025, solidifying its place among the world's top institutions. UK Rankings – It consistently ranks among the top 3 universities in the UK, often competing with Oxford for the number one spot in national rankings like the Complete University Guide 2025 (ranked 1st). Academic Excellence & Reputation – Cambridge is renowned for its high research output, strong graduate employability,and world-class faculty, making it one of the most prestigious universities globally.",
+      "location": "Cambridge, UK",
+      "website": "https://www.cam.ac.uk/"
     },
     {
-      "name": "Bath Spa University",
-      "image": "assets/images/UK/BathSpa.png",
-      "description": "A global leader in science, engineering, and technology education.",
-      "founded": "1907",
-      "location": "London, England",
-      "ranking": "Top 10"
+      "name": "University of Oxford",
+      "image": "assets/images/UK/university/University of Oxford.jpg",
+      "description": "Global Rankings – The University of Oxford has been ranked 1st in the Times Higher Education (THE) World University Rankings 2025, maintaining its top position for the ninth consecutive year. In the QS World University Rankings 2025, Oxford secured the 3rd position. Additionally, the US News Best Global Universities Rankings 2024-2025 placed Oxford at 4th globally. Subject-Specific Excellence – Oxford achieved 1st place in the QS World University Rankings 2025 for English Language and Literature, Anatomy and Physiology, and Geography, highlighting its strength in these disciplines. National Recognition – In the Complete University Guide 2025, Oxford is ranked 2nd in the UK. However, in The Times and The Sunday Times Good University Guide 2025.",
+      "location": "Oxford, UK",
+      "website": "https://www.ox.ac.uk/"
+    },
+    {
+      "name": "London School of Economics",
+      "image": "assets/images/UK/university/London school of economics.jpg",
+      "description": "Global Rankings – The London School of Economics and Political Science (LSE) is ranked 50th in the QS World University Rankings 2025 and holds the 50th position in the Times Higher Education World University Rankings 2025. Subject Excellence – LSE excels in social sciences, securing the 2nd position globally in Geography and 3rd in Development Studies according to the QS World University Rankings by Subject 2025. National Recognition – In the Complete University Guide 2025, LSE is ranked as the top university in London, a position it has maintained for thirteen consecutive years. Additionally, The Times and The Sunday Times Good University Guide 2025 named LSE the 'University of the Year'.",
+      "location": "London, UK",
+      "website": "https://www.lse.ac.uk/"
     }
+
   ],
   "benefits": "Pursuing a master's degree in just one year, equivalent to a two-year program in other countries, offers a fast-track route to higher education. Graduates can stay and work after completing their studies with a two-year work permit, providing valuable career opportunities. Top universities offer a diverse range of courses, allowing students to choose from various fields of study. Tuition fees can be paid in installments, with the option to fly after paying half, making it financially convenient. Additionally, the cost of education is more affordable compared to other countries, and numerous scholarships are available for international students. With plenty of job opportunities after graduation, studying abroad becomes a rewarding investment in the future.",
   "callToAction": {

@@ -2,64 +2,176 @@
 .carousel-container {
   position: relative;
   overflow: hidden;
-  max-height: 90vh; /* Makes height responsive to viewport */
-  margin-top: 100px;
+  height: calc(100vh - 80px); /* Adjust for header height */
+  margin-top: 80px;
   width: 100%;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-slide {
   display: none;
   position: relative;
   width: 100%;
-  height: 90%; /* Makes height responsive to viewport */
+  height: 100%;
 }
 
 .carousel-slide.active {
   display: block;
+  height: 100%;
 }
 
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Maintains aspect ratio while covering container */
-  object-position: center; /* Centers the image */
-  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  object-fit: cover; /* This ensures the image covers the full container */
+  object-position: center;
+  filter: brightness(0.7);
 }
 
-/* Optional: Add zoom effect on hover */
-.carousel-slide:hover img {
-  transform: scale(1.05); /* Adjust scale value for desired zoom level */
-}
-
+/* Remove the filter: blur from the overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Adjust the opacity (last value) as needed */
+  background: rgba(0, 0, 0, 0.3); /* Lighter overlay */
   z-index: 1;
 }
-.carousel-caption h1,p
-{
-color: white !important;
-}
+
 .carousel-caption {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white !important;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  z-index: 2; /* Make sure the caption appears above the overlay */
+  width: 80%;
+  max-width: 800px;
+  z-index: 2;
 }
 
+.carousel-caption h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 20px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  background: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 991px) {
+  .carousel-container {
+    height: calc(70vh - 70px);
+    margin-top: 70px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 36px;
+  }
+
+  .carousel-caption p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    height: calc(80vh - 60px);
+    margin-top: 60px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 32px;
+  }
+
+  .carousel-caption p {
+    font-size: 16px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-container {
+    height: calc(70vh - 60px);
+  }
+
+  .carousel-caption h1 {
+    font-size: 28px;
+  }
+
+  .carousel-caption p {
+    font-size: 14px;
+  }
+}
 
 .university-card {
   height: 100%;
   transition: transform 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.15);
 }
 
 .university-card:hover {
@@ -67,7 +179,7 @@ color: white !important;
 }
 
 .card-img-wrapper {
-  height: 200px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -102,11 +214,158 @@ color: white !important;
   background: linear-gradient(to right, #0056b3, #007bff);
 }
 
+.benefit {
+  line-height: 1.8;
+  font-size: 18px;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
 
-.benefit
-{
-  line-height: 30px;
-  font-size: 20px;
-  text-align: justify   ;
-  letter-spacing: 2px;
+.why-country-section {
+  background-color: #f9f9fc;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-country-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgba(240, 240, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+  z-index: 0;
+}
+
+.why-country-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.why-country-section h2 {
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 36px;
+}
+
+.why-country-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #0056b3;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.benefit-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.coming-soon-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon-content h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.coming-soon-content .lead {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.coming-soon-content .btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.coming-soon-content .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .why-country-section {
+    padding: 60px 0;
+  }
+  
+  .why-country-section h2 {
+    font-size: 28px;
+  }
+  
+  .benefit {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  
+  .benefit-wrapper {
+    padding: 25px;
+  }
+}
+
+/* Read more functionality */
+.description-container {
+  position: relative;
+}
+
+.card-text {
+  margin-bottom: 5px;
+  text-align: left;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 500px; /* Height when expanded */
+}
+
+.card-text.collapsed {
+  max-height: 150px; /* Height when collapsed - about 3-4 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.read-more, .read-less {
+  color: #0056b3;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  text-align: right;
+}
+
+.read-more:hover, .read-less:hover {
+  text-decoration: underline;
 }

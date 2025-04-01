@@ -1,6 +1,6 @@
 {
   "name": "Australia",
-  "slogan": "Quality education in a diverse and beautiful environment",
+  "slogan": "Australia is a great place for international students, offering good weather and top universities. It has affordable education, an easy post-study work permit, and many courses to choose from, including vocational programs. With an IELTS score of 6+, you can get into top universities like Monash and UTaS. Whether you're interested in arts, cooking, or engineering, Australia is a great place to study and build your future.",
   "bannerImages": [
     {"src": "assets/images/AUS/carousel/AUS1.jpg", "alt": "Sydney Opera House"},
     {"src": "assets/images/AUS/carousel/AUS2.jpg", "alt": "University of Melbourne"}
@@ -8,28 +8,25 @@
   ],
   "universities": [
     {
-      "name": "University of Sydney",
-      "image": "assets/images/australia/sydney-uni.jpg",
-      "description": "Australia's first university with a rich history of academic excellence and innovation.",
-      "founded": "1850",
-      "location": "Sydney, New South Wales",
-      "ranking": "Top 40"
+      "name": "UniSC University of the Sunshine Coast",
+      "image": "assets/images/AUS/university/USC.jpg",
+      "description": "World Ranking – Placed in the 501–600 range in 2024.Young University – Among the top 110 in the world.Happy Students – No.1 in Queensland for undergrad experience.Job Success – 88.2% employer satisfaction rate.Student Numbers – Over 18,600 students enrolled.",
+      "location": "Sunshine Coast, Australia",
+      "website":"https://www.usc.edu.au/"
     },
     {
-      "name": "University of Melbourne",
-      "image": "assets/images/australia/melbourne-uni.jpg",
-      "description": "A leading research university known for its vibrant campus life and world-class research.",
-      "founded": "1853",
-      "location": "Melbourne, Victoria",
-      "ranking": "Top 35"
+      "name": "University of Canberra",
+      "image": "assets/images/AUS/university/University Of Canberra.jpg",
+      "description": "Young University Ranking – 17th globally in THE Young University Rankings 2022.Graduate Employment – 85.3% for undergraduates, 92.9% for postgraduates.Employer Satisfaction – 78.3% overall satisfaction rate in 2023.Student Experience – 72.7% satisfaction for undergraduates, 74.5% for postgraduates.",
+      "website":"https://www.canberra.edu.au/",
+      "location": "Canberra, Australia"
     },
     {
-      "name": "Australian National University",
-      "image": "assets/images/australia/anu.jpg",
-      "description": "Australia's highest-ranked university, renowned for research and innovation.",
-      "founded": "1946",
-      "location": "Canberra, ACT",
-      "ranking": "Top 30"
+      "name": "University of Tasmania",
+      "image": "assets/images/AUS/university/University of Tasmania.jpg",
+      "description": "Sustainability Leader – Ranked 2nd globally for impact on climate and environment.Strong Research – In the top 50% worldwide across 213 research areas.Student Numbers – Around 34,500 students, mostly undergraduates.Job Success – 77.5% of undergrads and 95.9% of postgrads employed full-time.",
+      "location": "Hobart, Australia",
+      "website":"https://www.utas.edu.au/"
     }
   ],
   "benefits": "Australia offers a world-class education system with globally recognized qualifications. International students can work up to 20 hours per week during term and full-time during holidays. Graduates are eligible for post-study work visas for 2-4 years. Australia consistently ranks among the top countries for quality of life, safety, and happiness. Experience a welcoming, diverse society with students from over 200 countries studying in Australia. The country is a leader in research and innovation across many fields, offering cutting-edge educational experiences.",
