@@ -345,11 +345,12 @@
   text-align: left;
   transition: max-height 0.3s ease;
   overflow: hidden;
+  line-height: 30px;
   max-height: 500px; /* Height when expanded */
-}
+} 
 
 .card-text.collapsed {
-  max-height: 150px; /* Height when collapsed - about 3-4 lines */
+  max-height: 150px; /* Height twhen collapsed - about 3-4 lines */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

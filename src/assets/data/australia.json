@@ -10,21 +10,21 @@
     {
       "name": "UniSC University of the Sunshine Coast",
       "image": "assets/images/AUS/university/USC.jpg",
-      "description": "World Ranking – Placed in the 501–600 range in 2024.Young University – Among the top 110 in the world.Happy Students – No.1 in Queensland for undergrad experience.Job Success – 88.2% employer satisfaction rate.Student Numbers – Over 18,600 students enrolled.",
+      "description": "<h5>Global Rankings :-</h5> Placed in the <u><b>501–600 range in 2024</b></u>.<br><h5>Young University Excellence :-</h5> Among the <u><b>top 110 young universities in the world</b></u>.<br><h5>Student Experience :-</h5> <u><b>No.1 in Queensland for undergraduate experience</b></u>.<br><h5>Career Success :-</h5> <u><b>88.2% employer satisfaction rate</b></u>.<br><h5>Student Community :-</h5> Over <u><b>18,600 students enrolled</b></u>.",
       "location": "Sunshine Coast, Australia",
       "website":"https://www.usc.edu.au/"
     },
     {
       "name": "University of Canberra",
       "image": "assets/images/AUS/university/University Of Canberra.jpg",
-      "description": "Young University Ranking – 17th globally in THE Young University Rankings 2022.Graduate Employment – 85.3% for undergraduates, 92.9% for postgraduates.Employer Satisfaction – 78.3% overall satisfaction rate in 2023.Student Experience – 72.7% satisfaction for undergraduates, 74.5% for postgraduates.",
+      "description": "<h5>Global Rankings :-</h5> <u><b>17th globally in THE Young University Rankings 2022</b></u>.<br><h5>Graduate Employment :-</h5> <u><b>85.3% for undergraduates, 92.9% for postgraduates</b></u>.<br><h5>Employer Satisfaction :-</h5> <u><b>78.3% overall satisfaction rate in 2023</b></u>.<br><h5>Student Experience :-</h5> <u><b>72.7% satisfaction for undergraduates, 74.5% for postgraduates</b></u>.",
       "website":"https://www.canberra.edu.au/",
       "location": "Canberra, Australia"
     },
     {
       "name": "University of Tasmania",
       "image": "assets/images/AUS/university/University of Tasmania.jpg",
-      "description": "Sustainability Leader – Ranked 2nd globally for impact on climate and environment.Strong Research – In the top 50% worldwide across 213 research areas.Student Numbers – Around 34,500 students, mostly undergraduates.Job Success – 77.5% of undergrads and 95.9% of postgrads employed full-time.",
+      "description": "<h5>Global Impact :-</h5> <u><b>Ranked 2nd globally for impact on climate and environment</b></u>.<br><h5>Research Excellence :-</h5> In the <u><b>top 50% worldwide across 213 research areas</b></u>.<br><h5>Student Community :-</h5> Around <u><b>34,500 students, mostly undergraduates</b></u>.<br><h5>Career Success :-</h5> <u><b>77.5% of undergrads and 95.9% of postgrads employed full-time</b></u>.",
       "location": "Hobart, Australia",
       "website":"https://www.utas.edu.au/"
     }

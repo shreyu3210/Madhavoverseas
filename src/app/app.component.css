@@ -121,7 +121,7 @@ app-header {
 
 /* Tooltip styles */
 .tooltip {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   bottom: 100%;
   left: 50%;
@@ -133,9 +133,14 @@ app-header {
   font-size: 14px;
   white-space: nowrap;
   margin-bottom: 10px;
-  opacity: 0;
-  transition: all 0.3s ease;
+  opacity: 1;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.tooltip.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .tooltip::after {
@@ -149,6 +154,7 @@ app-header {
   border-color: #333 transparent transparent transparent;
 }
 
+/* Remove the hover effect since tooltip is always visible */
 .chatbot-btn:hover .tooltip {
   visibility: visible;
   opacity: 1;

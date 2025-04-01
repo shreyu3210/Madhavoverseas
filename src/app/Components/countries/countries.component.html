@@ -13,40 +13,46 @@
   <!-- Banner/Carousel Section -->
   <div class="carousel-container position-relative">
     <div class="carousel-wrapper">
-      <div *ngFor="let image of countryData.bannerImages; let i = index" 
-          class="carousel-slide" 
-          [ngClass]="{'active': i === activeIndex}">
+      <div
+        *ngFor="let image of countryData.bannerImages; let i = index"
+        class="carousel-slide"
+        [ngClass]="{ active: i === activeIndex }"
+      >
         <div class="overlay"></div>
-        <img [src]="image.src" [alt]="image.alt" class="img-fluid w-100">
+        <img [src]="image.src" [alt]="image.alt" class="img-fluid w-100" />
         <div class="carousel-caption">
-          <h1>Study in {{countryData.name}}</h1>
-          <p class="lead">{{countryData.slogan}}</p>
+          <h1>Study in {{ countryData.name }}</h1>
+          <p class="lead">{{ countryData.slogan }}</p>
         </div>
       </div>
     </div>
-    
+
     <button class="carousel-control-prev" (click)="prevSlide()">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </button>
     <button class="carousel-control-next" (click)="nextSlide()">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>
-    
+
     <div class="carousel-indicators">
-      <button *ngFor="let image of countryData.bannerImages; let i = index" 
-              [ngClass]="{'active': i === activeIndex}"
-              (click)="setActiveSlide(i)"></button>
+      <button
+        *ngFor="let image of countryData.bannerImages; let i = index"
+        [ngClass]="{ active: i === activeIndex }"
+        (click)="setActiveSlide(i)"
+      ></button>
     </div>
   </div>
-  
+
   <!-- Coming Soon Message for Unsupported Countries -->
   <div *ngIf="!isSupportedCountry" class="coming-soon-section py-5">
     <div class="container text-center">
       <div class="coming-soon-content">
         <h2>Coming Soon!</h2>
-        <p class="lead">{{countryData.benefits}}</p>
+        <p class="lead">{{ countryData.benefits }}</p>
         <div class="mt-4">
-          <a routerLink="/contact" class="btn btn-primary">Contact Us for More Information</a>
+          <a routerLink="/contact" class="btn btn-primary"
+            >Contact Us for More Information</a
+          >
         </div>
       </div>
     </div>
@@ -55,7 +61,9 @@
   <!-- Universities Section (only show for supported countries) -->
   <div *ngIf="isSupportedCountry" class="universities-section py-5">
     <div class="container">
-      <h2 class="text-center mb-5">Top Universities in {{countryData.name}}</h2>
+      <h2 class="text-center mb-5">
+        Top Universities in {{ countryData.name }}
+      </h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col" *ngFor="let university of countryData.universities">
           <div class="card university-card">
@@ -67,21 +75,44 @@
                 [alt]="university.name"
               />
             </div>
-            <div class="card-body text-center">
-              <h3 class="card-title">{{university.name}}</h3>
-              <div class="description-container">
-                <p class="card-text" [ngClass]="{'collapsed': !university.expanded}">{{university.description}}</p>
-                <a class="read-more" (click)="toggleDescription(university)" *ngIf="!university.expanded">...Read more</a>
-                <a class="read-less" (click)="toggleDescription(university)" *ngIf="university.expanded">Show less</a>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">{{ university.name }}</h3>
+              <div class="description-container flex-grow-1">
+                <p
+                  class="card-text"
+                  [ngClass]="{ collapsed: !university.expanded }"
+                  [innerHTML]="university.description"
+                ></p>
+                <a
+                  class="read-more"
+                  (click)="toggleDescription(university)"
+                  *ngIf="!university.expanded"
+                  >...Read more</a
+                >
+                <a
+                  class="read-less"
+                  (click)="toggleDescription(university)"
+                  *ngIf="university.expanded"
+                  >Show less</a
+                >
               </div>
-              <br>
-              <ul class="list-unstyled">
-             
-                <h4>  Location: {{university.location}}</h4>
-               
-              </ul>
-              <br>
-              <a [href]="university.website || '#'" target="_blank" class="btn btn-primary">Learn More</a>
+              <div class="link mt-auto">
+                <ul class="list-unstyled">
+                  <h4>Location: {{ university.location }}</h4>
+                </ul>
+                <br />
+                <!-- <a
+                  [href]="university.website || '#'"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Learn More</a
+                > -->
+                <a
+                  routerLink="/contact"
+                  class="btn btn-primary"
+                  >Contact Us</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -92,8 +123,8 @@
   <!-- Why Study in Country Section (only show for supported countries) -->
   <div *ngIf="isSupportedCountry" class="why-country-section py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-5">Why Study in {{countryData.name}}?</h2>
-   
+      <h2 class="text-center mb-5">Why Study in {{ countryData.name }}?</h2>
+
       <!-- <div class="row g-4">
         <div class="col-md-3" *ngFor="let benefit of countryData.benefits">
           <div class="feature-box text-center">
@@ -104,11 +135,10 @@
         </div>
       </div> -->
       <div class="benefit-wrapper">
-        <p class="benefit">{{countryData.benefits}}</p>
+        <p class="benefit">{{ countryData.benefits }}</p>
       </div>
     </div>
   </div>
 
   <!-- Call to Action Section -->
- 
 </div>

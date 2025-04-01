@@ -6,12 +6,12 @@
 <div class="main">
   
   <button 
-    class="chatbot-btn pulse"
+    class="chatbot-btn pulse ml-3"
     [ngClass]="{'pulse':!showChatbot}"
     (click)="toggleChatbot()" 
     aria-label="Open Chatbot">
     <i class="fas fa-robot"></i>
-    <span class="tooltip">Vani <br>is ready to <br>assist you!</span>
+    <span class="tooltip" [ngClass]="{'hidden': !showTooltip}">Vani <br>is ready to <br>assist you!</span>
   </button>
   
   <!-- Chatbot popup container -->
