@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
   showMore = false;
   destinations = [
-    // { country: "USA", image: "assets/images/usa.jpg", description: "Studying in the United States is a popular choice for international students due to its world-class universities, diverse academic programs, and cultural opportunities." },
-    // { country: "Canada", image: "assets/images/ca-1.png", description: "Studying in Canada is a popular choice for international students due to its high-quality education system, cultural diversity, and beautiful landscapes." },
+    { country: "USA", image: "assets/images/usa.jpg", description: "Studying in the United States is a popular choice for international students due to its world-class universities, diverse academic programs, and cultural opportunities." },
+    { country: "Canada", image: "assets/images/ca-1.png", description: "Studying in Canada is a popular choice for international students due to its high-quality education system, cultural diversity, and beautiful landscapes." },
     { country: "Australia", image: "assets/images/sydney.jpg", description: "Studying in Australia can be a rewarding experience, as the country is known for its high-quality education system, diverse culture, and beautiful landscapes." },
     { country: "UK", image: "assets/images/uk.jpg", description: "Studying in the United Kingdom (UK) is a popular choice for international students due to its prestigious universities, diverse cultural experiences, and the English language of instruction." }
   ];

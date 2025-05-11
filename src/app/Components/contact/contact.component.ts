@@ -8,7 +8,7 @@ import { EmailService } from '../../services/email.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  email: string = "shreyu3210@gmail.com";
+  email: string = "dir.madhavoverseas@gmail.com";
   phone: string = "+91-7778832033";
   address: string = "201, Sangath Mall-1, Motera, Ahmedabad, Gujarat 382424";
 

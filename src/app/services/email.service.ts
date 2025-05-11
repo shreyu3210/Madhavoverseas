@@ -11,7 +11,7 @@ export class EmailService {
   
   sendEmail(contactData: any): Observable<any> {
     // Replace with your actual backend API endpoint
-    const emailApiUrl = 'http://192.168.0.110:8000/api/email/send';
+    const emailApiUrl = 'https://madhavoverseas.co.in/ClientSync/email/send';
     
     return this.http.post(emailApiUrl, contactData);
   }

@@ -16,11 +16,13 @@ interface ChatMessage {
 export class AppComponent {
   title = 'Madhavoverseas';
   showScrollButton = false;
+  showTooltip = true;
   
   // Chatbot related properties
   showChatbot = false;
   userMessage = '';
   chatMessages: ChatMessage[] = [];
+  showQuickQuestions = true; // Show quick questions by default
   @ViewChild('chatMessagesRef') chatMessagesContainer!: ElementRef;
   
   constructor(private router: Router, private http: HttpClient) {
@@ -35,6 +37,11 @@ export class AppComponent {
       text: 'Hello! How can I help you with Madhav Overseas today?',
       sender: 'bot'
     });
+
+    // Hide tooltip after 1 minute
+    setTimeout(() => {
+      this.showTooltip = false;
+    }, 60000); // 60000 milliseconds = 1 minute
   }
   
   @HostListener('window:scroll', [])
@@ -69,6 +76,13 @@ export class AppComponent {
     this.showChatbot = !this.showChatbot;
   }
   
+  // Method to handle quick question selection
+  selectQuickQuestion(question: string) {
+    this.userMessage = question;
+    this.sendMessage();
+    this.showQuickQuestions = false; // Hide quick questions after selection
+  }
+  
   sendMessage() {
     if (!this.userMessage.trim()) return;
     
@@ -85,7 +99,13 @@ export class AppComponent {
     setTimeout(() => this.scrollToBottom(), 100);
     
     // Call Python API
-    this.http.post('http://192.168.0.110:8000/chat', { query: userQuery }, { responseType: 'text' })
+// for production
+    // https://madhavoverseas.co.in/ClientSync/chat
+
+    // for local
+    // http://localhost:8000/chat
+
+    this.http.post('https://madhavoverseas.co.in/ClientSync/chat', { query: userQuery }, { responseType: 'text' })
       .subscribe(response => {
         if (response) {
           this.chatMessages.push({
@@ -105,6 +125,7 @@ export class AppComponent {
           text: 'Sorry, I encountered an error. Please try again later.',
           sender: 'bot'
         });
+        setTimeout(() => this.scrollToBottom(), 100);
       });
   }
 
