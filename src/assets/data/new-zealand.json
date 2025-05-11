@@ -1,35 +1,29 @@
 {
     "name": "New Zealand",
-    "slogan": "lorem20dafaadfasf",
-     
-  
+    "slogan": "Imagine earning a globally recognized degree while surrounded by breathtaking landscapes. In New Zealand, you get the best of both worlds—high-quality education and an unbeatable lifestyle. With a strong focus on practical learning, small class sizes, and innovative research, students receive a hands-on education that prepares them for the real world. And when you’re not in class? There’s no shortage of adventures, from hiking and skiing to exploring Maori culture.",
     "bannerImages": [
-      {"src": "assets/images/New-Zealand/carousel/NEWZ1.jpg", "alt": "UK University Scene"},
-      {"src": "assets/images/New-Zealand/carousel/NEWZ2.jpg", "alt": "Coventry University"}  
+      {"src": "assets/images/New-Zealand/carousel/NEWZ1.jpg", "alt": "Auckland Skyline"},
+      {"src": "assets/images/New-Zealand/carousel/NEWZ2.jpg", "alt": "University of Auckland Campus"}  
     ],
-  
-  
     "universities": [
       {
-        "name": "Coventry University",
-        "image": "assets/images/UK/coventry.png",
-        "description": "The oldest university in the English-speaking world, leading in innovation.",
-        "founded": "1096",
-        "location": "Oxford, England",
-        "ranking": "Top 3"
+        "name": "University of Auckland",
+        "image": "assets/images/New-Zealand/university/auckland.jpg",
+        "description": "New Zealand's leading university with a strong international reputation for academic excellence.",
+        "location": "Auckland, New Zealand",
+        "website": "https://www.auckland.ac.nz/"
       },
       {
-        "name": "Bath Spa University",
-        "image": "assets/images/UK/BathSpa.png",
-        "description": "A global leader in science, engineering, and technology education.",
-        "founded": "1907",
-        "location": "London, England",
-        "ranking": "Top 10"
+        "name": "University of Otago",
+        "image": "assets/images/New-Zealand/university/otago.jpg",
+        "description": "New Zealand's first university known for its vibrant campus life and research excellence.",
+        "location": "Dunedin, New Zealand",
+        "website": "https://www.otago.ac.nz/"
       }
     ],
-    "benefits": "Pursuing a master's degree in just one year, equivalent to a two-year program in other countries, offers a fast-track route to higher education. Graduates can stay and work after completing their studies with a two-year work permit, providing valuable career opportunities. Top universities offer a diverse range of courses, allowing students to choose from various fields of study. Tuition fees can be paid in installments, with the option to fly after paying half, making it financially convenient. Additionally, the cost of education is more affordable compared to other countries, and numerous scholarships are available for international students. With plenty of job opportunities after graduation, studying abroad becomes a rewarding investment in the future.",
+    "benefits": "New Zealand offers internationally recognized qualifications and a supportive learning environment. Students can work up to 20 hours per week during term and full-time during holidays. Graduates can apply for post-study work visas for 1-3 years. New Zealand consistently ranks among the safest and most peaceful countries in the world. Experience a warm, welcoming culture with a strong emphasis on work-life balance. New Zealand's unique natural environment provides countless opportunities for outdoor adventures and exploration.",
     "callToAction": {
-      "title": "Ready to Begin Your UK Education Journey?",
-      "description": "Contact us today to learn more about studying in the UK"
+      "title": "Start Your New Zealand Adventure",
+      "description": "Contact us today to learn more about studying in New Zealand"
     }
   } 

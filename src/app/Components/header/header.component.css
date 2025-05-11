@@ -182,14 +182,29 @@ ul li
     }
     
     .dropdown-menu {
-        background-color: white !important;
-        position: static;
-        box-shadow: none;
-        padding-left: 1rem;
+        border: none;
+        padding-left: 20px;
+        background-color: transparent;
     }
     
-    .dropdown-item {
-        font-size: 16px;
+    .dropdown-menu.show {
+        display: block;
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+    
+    .nav-item.dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-toggle::after {
+        float: right;
+        margin-top: 10px;
     }
 }
 
@@ -233,4 +248,12 @@ ul li
 /* Style for active dropdown */
 .nav-item.dropdown.active .nav-link {
     color:#78D1F2;
+}
+
+.dropdown-item.disabled {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: transparent;
+  opacity: 0.65;
+  cursor: not-allowed;
 }
