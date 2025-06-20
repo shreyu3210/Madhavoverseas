@@ -10,10 +10,10 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import { LanguagerequirementComponent } from './languagerequirement/languagerequirement.component';
-
+import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { CountriesComponent } from './Components/countries/countries.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HomeComponent,
     ContactComponent,
     LanguagerequirementComponent,
-
+    PrivacyComponent,
     CountriesComponent
   ],
   imports: [
@@ -34,9 +34,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-  ],
+providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

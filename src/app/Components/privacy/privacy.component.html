@@ -1,0 +1,699 @@
+
+    <section class="w3l-about-breadcrumb text-left">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+          <div class="container py-2">
+            <h1 class="title text-white">Privacy Policy</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumbs-custom-path mt-2">
+                <li><a routerLink="/" aria-label="Home" class="text-white">Home</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Privacy Policy </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+    </section>
+    <main class="container-fluid my-5 privacy-page">
+        <!-- Cookie Consent Banner -->
+        <div class="cookie-consent container" *ngIf="showCookieConsent" [@fadeInOut]>
+          <div class="cookie-content">
+            <div>
+              <p class="text-white mb-1"><i class="bi bi-shield-check me-2 text-white"></i> <strong>Privacy Notice</strong></p>
+              <p class="text-white mb-0">We use cookies to enhance your browsing experience, personalize content, and analyze our traffic.</p>
+            </div>
+            <div class="cookie-buttons">
+              <button class="btn btn-light btn-sm" (click)="acceptCookies()">
+                <i class="bi bi-check2-circle me-1"></i> Accept
+              </button>
+              <button class="btn btn-outline-light btn-sm" (click)="rejectCookies()">
+                <i class="bi bi-x-circle me-1"></i> Reject
+              </button>
+              <button class="btn btn-outline-light btn-sm" (click)="showCookieDetails = !showCookieDetails">
+                <i class="bi bi-info-circle me-1"></i> More info
+              </button>
+            </div>
+          </div>
+          <div class="cookie-details" *ngIf="showCookieDetails" [@expandCollapse]>
+            <p class="text-white mb-0">Our cookies help us improve site performance, provide social media features, and personalize content to better serve you. By clicking "Accept", you consent to our use of these technologies. You can customize your preferences anytime in your browser settings.</p>
+          </div>
+        </div>
+      
+    
+        <div class="row justify-content-center">
+          <!-- Table of Contents Sidebar -->
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="toc-sidebar" [ngClass]="{'sticky': isSticky}">
+              <div class="card shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                  <h5 class="mb-0 text-white">Table of Contents</h5>
+                </div>
+                <div class="card-body p-0">
+                  <ul class="list-group list-group-flush toc-list">
+                    <li class="list-group-item" *ngFor="let section of tocSections">
+                      <a href="#{{section.id}}" (click)="scrollToSection($event, section.id)">{{section.title}}</a>
+                      <ul *ngIf="section.subsections && section.subsections.length > 0">
+                        <li *ngFor="let subsection of section.subsections">
+                          <a href="#{{subsection.id}}" (click)="scrollToSection($event, subsection.id)">{{subsection.title}}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Main Content -->
+          <div class="col-lg-9">
+            <div class="card shadow">
+              <div class="card-body p-md-5 p-3">
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                  <div>
+                    <h1 class="card-title text-primary mb-2">Privacy Policy</h1>
+                    <p class="text-muted">Last updated: May 09, 2025</p>
+                  </div>
+                  <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas">
+                    <i class="bi bi-list me-2"></i>Contents
+                  </button>
+                </div>
+      
+                <!-- Mobile Table of Contents Offcanvas -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+                  <div class="offcanvas-header bg-primary text-white">
+                    <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="list-group list-group-flush toc-list">
+                      <li class="list-group-item" *ngFor="let section of tocSections">
+                        <a href="#{{section.id}}" data-bs-dismiss="offcanvas" (click)="scrollToSection($event, section.id)">{{section.title}}</a>
+                        <ul *ngIf="section.subsections && section.subsections.length > 0">
+                          <li *ngFor="let subsection of section.subsections">
+                            <a href="#{{subsection.id}}" data-bs-dismiss="offcanvas" (click)="scrollToSection($event, subsection.id)">{{subsection.title}}</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+      
+                <div class="privacy-content">
+                  <section id="introduction" class="mb-5 section-animate" [@fadeIn]>
+                    <p>
+                      This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
+                      information when You use the Service and tells You about Your privacy rights and how the law protects
+                      You.
+                    </p>
+      
+                    <p>
+                      We use Your Personal data to provide and improve the Service. By using the Service, You agree to the
+                      collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been
+                      created with the help of the Privacy Policy Generator.
+                    </p>
+                  </section>
+      
+                  <section id="interpretation" class="mb-5 section-animate" [@fadeIn]>
+                    <h2 class="mt-5 mb-3 text-primary section-header" (click)="toggleSection('interpretation')">
+                      <i class="bi" [ngClass]="expandedSections.interpretation ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+                      Interpretation and Definitions
+                    </h2>
+      
+                    <div [@expandCollapse] *ngIf="expandedSections.interpretation">
+                      <h3 class="mt-4 mb-2">Interpretation</h3>
+                      <p>
+                        The words of which the initial letter is capitalized have meanings defined under the following
+                        conditions. The following definitions shall have the same meaning regardless of whether they appear in
+                        singular or in plural.
+                      </p>
+      
+                      <h3 class="mt-4 mb-2">Definitions</h3>
+                      <p>For the purposes of this Privacy Policy:</p>
+      
+                      <div class="accordion" id="definitionsAccordion">
+                        <div class="accordion-item">
+                          <h4 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDefinitions" aria-expanded="false" aria-controls="collapseDefinitions">
+                              View All Definitions
+                            </button>
+                          </h4>
+                          <div id="collapseDefinitions" class="accordion-collapse collapse" data-bs-parent="#definitionsAccordion">
+                            <div class="accordion-body">
+                              <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Account</strong> means a unique account created for You to access our Service or parts of our
+                                  Service.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control
+                                  with a party, where "control" means ownership of 50% or more of the shares, equity interest or other
+                                  securities entitled to vote for election of directors or other managing authority.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement)
+                                  refers to Madhav Overseas, 201, Sangath Mall-1, Motera, Ahmedabad, Gujarat 382424.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other
+                                  device by a website, containing the details of Your browsing history on that website among its many
+                                  uses.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Country</strong> refers to: Gujarat, India
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Device</strong> means any device that can access the Service such as a computer, a cellphone
+                                  or a digital tablet.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Personal Data</strong> is any information that relates to an identified or identifiable
+                                  individual.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Service</strong> refers to the Website.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Service Provider</strong> means any natural or legal person who processes the data on behalf
+                                  of the Company. It refers to third-party companies or individuals employed by the Company to
+                                  facilitate the Service, to provide the Service on behalf of the Company, to perform services related
+                                  to the Service or to assist the Company in analyzing how the Service is used.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Third-party Social Media Service</strong> refers to any website or any social network website
+                                  through which a User can log in or create an account to use the Service.
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the
+                                  Service or from the Service infrastructure itself (for example, the duration of a page visit).
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>Website</strong> refers to Madhav Overseas, accessible from
+                                  <a href="https://madhavoverseas.co.in/#/" class="text-primary">
+                                    https://madhavoverseas.co.in/#/
+                                  </a>
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                  <strong>You</strong> means the individual accessing or using the Service, or the company, or other
+                                  legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+      
+                  <section id="personal-data" class="mb-5 section-animate" [@fadeIn]>
+                    <h2 class="mt-5 mb-3 text-primary section-header" (click)="toggleSection('personalData')">
+                      <i class="bi" [ngClass]="expandedSections.personalData ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+                      Collecting and Using Your Personal Data
+                    </h2>
+      
+                    <div [@expandCollapse] *ngIf="expandedSections.personalData">
+                      <h3 class="mt-4 mb-2" id="types-data">Types of Data Collected</h3>
+      
+                      <div class="card mb-4 highlight-card">
+                        <div class="card-body">
+                          <h4 class="mt-3 mb-2">Personal Data</h4>
+                          <p>
+                            While using Our Service, We may ask You to provide Us with certain personally identifiable information
+                            that can be used to contact or identify You. Personally identifiable information may include, but is not
+                            limited to:
+                          </p>
+                          <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item bg-transparent">Email address</li>
+                            <li class="list-group-item bg-transparent">First name and last name</li>
+                            <li class="list-group-item bg-transparent">Phone number</li>
+                            <li class="list-group-item bg-transparent">Usage Data</li>
+                          </ul>
+                        </div>
+                      </div>
+      
+                      <div class="card mb-4">
+                        <div class="card-body">
+                          <h4 class="mt-3 mb-2">Usage Data</h4>
+                          <p>Usage Data is collected automatically when using the Service.</p>
+                          <p>
+                            Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address),
+                            browser type, browser version, the pages of our Service that You visit, the time and date of Your visit,
+                            the time spent on those pages, unique device identifiers and other diagnostic data.
+                          </p>
+                          <p>
+                            When You access the Service by or through a mobile device, We may collect certain information
+                            automatically, including, but not limited to, the type of mobile device You use, Your mobile device
+                            unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile
+                            Internet browser You use, unique device identifiers and other diagnostic data.
+                          </p>
+                          <p>
+                            We may also collect information that Your browser sends whenever You visit our Service or when You
+                            access the Service by or through a mobile device.
+                          </p>
+                        </div>
+                      </div>
+      
+                      <h4 class="mt-3 mb-2" id="third-party">Information from Third-Party Social Media Services</h4>
+                      <p>
+                        The Company allows You to create an account and log in to use the Service through the following
+                        Third-party Social Media Services:
+                      </p>
+                      <div class="social-media-icons mb-4">
+                        <span class="social-icon" *ngFor="let social of socialMediaServices" [title]="social">
+                          <i class="bi" [ngClass]="'bi-' + social.toLowerCase()"></i>
+                        </span>
+                      </div>
+                      <p>
+                        If You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We
+                        may collect Personal data that is already associated with Your Third-Party Social Media Service's
+                        account, such as Your name, Your email address, Your activities or Your contact list associated with
+                        that account.
+                      </p>
+                      <p>
+                        You may also have the option of sharing additional information with the Company through Your Third-Party
+                        Social Media Service's account. If You choose to provide such information and Personal Data, during
+                        registration or otherwise, You are giving the Company permission to use, share, and store it in a manner
+                        consistent with this Privacy Policy.
+                      </p>
+      
+                      <h4 class="mt-3 mb-2" id="tracking">Tracking Technologies and Cookies</h4>
+                      <p>
+                        We use Cookies and similar tracking technologies to track the activity on Our Service and store certain
+                        information. Tracking technologies used are beacons, tags, and scripts to collect and track information
+                        and to improve and analyze Our Service. The technologies We use may include:
+                      </p>
+                      <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item bg-transparent">
+                          <strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can
+                          instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if
+                          You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have
+                          adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                          <strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small
+                          electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel
+                          gifs) that permit the Company, for example, to count users who have visited those pages or opened an
+                          email and for other related website statistics (for example, recording the popularity of a certain
+                          section and verifying system and server integrity).
+                        </li>
+                      </ul>
+                      <p>
+                        Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or
+                        mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web
+                        browser. You can learn more about cookies on TermsFeed website article.
+                      </p>
+                      <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
+                      
+                      <div class="cookie-types">
+                        <div class="card mb-4 cookie-card" *ngFor="let cookie of cookieTypes; let i = index" [@cardAnimation]="i">
+                          <div class="card-body">
+                            <h5 class="card-title">{{cookie.title}}</h5>
+                            <p class="card-text">Type: {{cookie.type}}</p>
+                            <p class="card-text">Administered by: {{cookie.admin}}</p>
+                            <p class="card-text">{{cookie.purpose}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p>
+                        For more information about the cookies we use and your choices regarding cookies, please visit our
+                        Cookies Policy or the Cookies section of our Privacy Policy.
+                      </p>
+      
+                      <h3 class="mt-4 mb-2" id="use-data">Use of Your Personal Data</h3>
+                      <p>The Company may use Personal Data for the following purposes:</p>
+                      <div class="data-use-container">
+                        <ul class="list-group list-group-flush mb-4">
+                          <li class="list-group-item bg-transparent data-use-item" *ngFor="let use of dataUses; let i = index" [@listAnimation]="i">
+                            <strong>{{use.title}}</strong>: {{use.description}}
+                          </li>
+                        </ul>
+                      </div>
+                      <p>We may share Your personal information in the following situations:</p>
+                      <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item bg-transparent">
+                          <strong>With Service Providers</strong>: We may share Your personal information with Service Providers
+                          to monitor and analyze the use of our Service, to contact You.
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                          <strong>For business transfers</strong>: We may share or transfer Your personal information in
+                          connection with, or during negotiations of, any merger, sale of Company assets, financing, or
+                          acquisition of all or a portion of Our business to another company.
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                          <strong>With Affiliates</strong>: We may share Your information with Our affiliates, in which case we
+                          will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and
+                          any other subsidiaries, joint venture partners or other companies that We control or that are under
+                          common control with Us.
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                          <strong>With business partners</strong>: We may share Your information with Our business partners to
+                          offer You certain products, services or promotions.
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                          <strong>With other users</strong>: when You share personal information or otherwise interact in the
+                          public areas with other users, such information may be viewed by all users and may be publicly
+                          distributed outside. If You interact with other users or register through a Third-Party Social Media
+                          Service, Your contacts on the Third-Party Social Media Service may see Your name, profile, pictures
+                          and description of Your activity. Similarly, other users will be able to view descriptions of Your
+                          activity, communicate with You and view Your profile.
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                          <strong>With Your consent</strong>: We may disclose Your personal information for any other purpose
+                          with Your consent.
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+      
+                  <section id="data-management" class="mb-5 section-animate" [@fadeIn]>
+                    <h2 class="mt-5 mb-3 text-primary section-header" (click)="toggleSection('dataManagement')">
+                      <i class="bi" [ngClass]="expandedSections.dataManagement ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+                      Data Management
+                    </h2>
+      
+                    <div [@expandCollapse] *ngIf="expandedSections.dataManagement">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="card mb-4 h-100">
+                            <div class="card-body">
+                              <h3 class="mt-2 mb-3">Retention of Your Personal Data</h3>
+                              <p>
+                                The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in
+                                this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with
+                                our legal obligations (for example, if we are required to retain your data to comply with applicable
+                                laws), resolve disputes, and enforce our legal agreements and policies.
+                              </p>
+                              <p>
+                                The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained
+                                for a shorter period of time, except when this data is used to strengthen the security or to improve the
+                                functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card mb-4 h-100">
+                            <div class="card-body">
+                              <h3 class="mt-2 mb-3">Transfer of Your Personal Data</h3>
+                              <p>
+                                Your information, including Personal Data, is processed at the Company's operating offices and in any
+                                other places where the parties involved in the processing are located. It means that this information
+                                may be transferred to — and maintained on — computers located outside of Your state, province, country
+                                or other governmental jurisdiction where the data protection laws may differ than those from Your
+                                jurisdiction.
+                              </p>
+                              <p>
+                                Your consent to this Privacy Policy followed by Your submission of such information represents Your
+                                agreement to that transfer.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="card mb-4 h-100">
+                            <div class="card-body">
+                              <h3 class="mt-2 mb-3">Delete Your Personal Data</h3>
+                              <p>
+                                You have the right to delete or request that We assist in deleting the Personal Data that We have
+                                collected about You.
+                              </p>
+                              <p>
+                                Our Service may give You the ability to delete certain information about You from within the Service.
+                              </p>
+                              <p>
+                                You may update, amend, or delete Your information at any time by signing in to Your Account, if you have
+                                one, and visiting the account settings section that allows you to manage Your personal information. You
+                                may also contact Us to request access to, correct, or delete any personal information that You have
+                                provided to Us.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card mb-4 h-100">
+                            <div class="card-body">
+                              <h3 class="mt-2 mb-3">Security of Your Personal Data</h3>
+                              <p>
+                                The security of Your Personal Data is important to Us, but remember that no method of transmission over
+                                the Internet, or method of electronic storage is 100% secure. While We strive to use commercially
+                                acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
+                              </p>
+                              <div class="security-icon text-center mt-4">
+                                <i class="bi bi-shield-lock fs-1 text-primary"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <h3 class="mt-4 mb-2">Disclosure of Your Personal Data</h3>
+      
+                      <div class="accordion" id="disclosureAccordion">
+                        <div class="accordion-item">
+                          <h4 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Business Transactions
+                            </button>
+                          </h4>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#disclosureAccordion">
+                            <div class="accordion-body">
+                              <p>
+                                If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be
+                                transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a
+                                different Privacy Policy.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h4 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Law enforcement
+                            </button>
+                          </h4>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#disclosureAccordion">
+                            <div class="accordion-body">
+                              <p>
+                                Under certain circumstances, the Company may be required to disclose Your Personal Data if required to
+                                do so by law or in response to valid requests by public authorities (e.g. a court or a government
+                                agency).
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h4 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Other legal requirements
+                            </button>
+                          </h4>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#disclosureAccordion">
+                            <div class="accordion-body">
+                              <p>
+                                The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
+                              </p>
+                              <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item bg-transparent">Comply with a legal obligation</li>
+                                <li class="list-group-item bg-transparent">Protect and defend the rights or property of the Company</li>
+                                <li class="list-group-item bg-transparent">Prevent or investigate possible wrongdoing in connection with the Service</li>
+                                <li class="list-group-item bg-transparent">Protect the personal safety of Users of the Service or the public</li>
+                                <li class="list-group-item bg-transparent">Protect against legal liability</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+      
+                  <section id="additional-info" class="mb-5 section-animate" [@fadeIn]>
+                    <h2 class="mt-5 mb-3 text-primary section-header" (click)="toggleSection('additionalInfo')">
+                      <i class="bi" [ngClass]="expandedSections.additionalInfo ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+                      Additional Information
+                    </h2>
+      
+                    <div [@expandCollapse] *ngIf="expandedSections.additionalInfo">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="card mb-4 info-card">
+                            <div class="card-body text-center">
+                              <div class="icon-container mb-3">
+                                <i class="bi bi-person-bounding-box fs-1 text-primary"></i>
+                              </div>
+                              <h3 class="card-title">Children's Privacy</h3>
+                              <button class="btn btn-outline-primary mt-3" (click)="toggleInfoCard('children')">
+                                View Details
+                              </button>
+                            </div>
+                            <div class="card-footer bg-transparent" *ngIf="expandedInfoCards.children" [@expandCollapse]>
+                              <p>
+                                Our Service does not address anyone under the age of 13. We do not knowingly collect personally
+                                identifiable information from anyone under the age of 13.
+                              </p>
+                              <p>
+                                If We need to rely on consent as a legal basis for processing Your information and Your country requires
+                                consent from a parent, We may require Your parent's consent before We collect and use that information.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card mb-4 info-card">
+                            <div class="card-body text-center">
+                              <div class="icon-container mb-3">
+                                <i class="bi bi-link-45deg fs-1 text-primary"></i>
+                              </div>
+                              <h3 class="card-title">Links to Other Websites</h3>
+                              <button class="btn btn-outline-primary mt-3" (click)="toggleInfoCard('links')">
+                                View Details
+                              </button>
+                            </div>
+                            <div class="card-footer bg-transparent" *ngIf="expandedInfoCards.links" [@expandCollapse]>
+                              <p>
+                                Our Service may contain links to other websites that are not operated by Us. If You click on a third
+                                party link, You will be directed to that third party's site.
+                              </p>
+                              <p>
+                                We have no control over and assume no responsibility for the content, privacy policies or practices of
+                                any third party sites or services.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card mb-4 info-card">
+                            <div class="card-body text-center">
+                              <div class="icon-container mb-3">
+                                <i class="bi bi-pencil-square fs-1 text-primary"></i>
+                              </div>
+                              <h3 class="card-title">Changes to Policy</h3>
+                              <button class="btn btn-outline-primary mt-3" (click)="toggleInfoCard('changes')">
+                                View Details
+                              </button>
+                            </div>
+                            <div class="card-footer bg-transparent" *ngIf="expandedInfoCards.changes" [@expandCollapse]>
+                              <p>
+                                We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new
+                                Privacy Policy on this page.
+                              </p>
+                              <p>
+                                You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy
+                                Policy are effective when they are posted on this page.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+      
+                  <section id="contact" class="mb-5 section-animate" [@fadeIn]>
+                    <h2 class="mt-5 mb-3 text-primary">Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+                    <div class="contact-card">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="contact-info">
+                                <p>
+                                  <i class="bi bi-globe me-2"></i> By visiting our website:
+                                  <a href="https://madhavoverseas.co.in/#/" class="text-primary">
+                                    https://madhavoverseas.co.in/#/
+                                  </a>
+                                </p>
+                                <p><i class="bi bi-geo-alt me-2"></i> 201, Sangath Mall-1, Motera, Ahmedabad, Gujarat 382424</p>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="contact-form">
+                                <h5>Send us a message</h5>
+                                <div class="mb-3">
+                                  <input type="email" class="form-control" placeholder="Your Email" (focus)="logFormInteraction('email focus')" (blur)="logFormInteraction('email blur')">
+                                </div>
+                                <div class="mb-3">
+                                  <textarea class="form-control" rows="3" placeholder="Your Message" (focus)="logFormInteraction('message focus')" (blur)="logFormInteraction('message blur')"></textarea>
+                                </div>
+                                <button class="btn btn-primary" (click)="submitContactForm()">Send Message</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+      
+                  <div class="privacy-footer text-center mt-5">
+                    <p class="text-muted">© 2025 Madhav Overseas. All rights reserved.</p>
+                    <div class="privacy-actions">
+                      <button class="btn btn-sm btn-outline-primary me-2" (click)="printPrivacyPolicy()">
+                        <i class="bi bi-printer me-1"></i> Print
+                      </button>
+                      <button class="btn btn-sm btn-outline-primary me-2" (click)="downloadPrivacyPolicy()">
+                        <i class="bi bi-download me-1"></i> Download PDF
+                      </button>
+                      <button class="btn btn-sm btn-outline-primary me-2" (click)="sharePrivacyPolicy()">
+                        <i class="bi bi-share me-1"></i> Share
+                      </button>
+                      <button class="btn btn-sm btn-outline-primary" (click)="resetCookiePreferences()">
+                        <i class="bi bi-sliders me-1"></i> Manage Cookie Preferences
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Share Modal -->
+        <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="shareModalLabel">Share Privacy Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Share this privacy policy via:</p>
+                <div class="d-flex justify-content-center gap-3 share-buttons">
+                  <button class="btn btn-outline-primary" (click)="shareVia('email')">
+                    <i class="bi bi-envelope-fill"></i>
+                  </button>
+                  <button class="btn btn-outline-primary" (click)="shareVia('facebook')">
+                    <i class="bi bi-facebook"></i>
+                  </button>
+                  <button class="btn btn-outline-primary" (click)="shareVia('twitter')">
+                    <i class="bi bi-twitter"></i>
+                  </button>
+                  <button class="btn btn-outline-primary" (click)="shareVia('linkedin')">
+                    <i class="bi bi-linkedin"></i>
+                  </button>
+                </div>
+                <div class="mt-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control" [value]="shareUrl" readonly #shareUrlInput>
+                    <button class="btn btn-outline-secondary" type="button" (click)="copyShareUrl(shareUrlInput)">
+                      <i class="bi" [ngClass]="copied ? 'bi-check' : 'bi-clipboard'"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Success Toast -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+          <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+              <strong class="me-auto">Success</strong>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              {{toastMessage}}
+            </div>
+          </div>
+        </div>
+      </main>

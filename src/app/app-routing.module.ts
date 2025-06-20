@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {AboutUsComponent} from './Components/about-us/about-us.component'
 import { ContactComponent } from './Components//contact/contact.component';
-
+import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { LanguagerequirementComponent } from './languagerequirement/languagerequirement.component';
 
 import { CountriesComponent } from './Components//countries/countries.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
-  
+  { path: 'privacy', component: PrivacyComponent },
   { path: 'language-requirement', component: LanguagerequirementComponent },
   
   // New dynamic country routes
@@ -26,10 +26,10 @@ const routes: Routes = [
   // Keep old routes temporarily for backward compatibility
   // { path: 'uk', redirectTo: 'countries/uk', pathMatch: 'full' },
   
-  { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect unknown routes to home
+  { path: '**', redirectTo: 'Home', pathMatch: 'full' } // Redirect unknown routes to home
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

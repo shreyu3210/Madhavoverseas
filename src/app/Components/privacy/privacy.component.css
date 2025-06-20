@@ -1,0 +1,325 @@
+/* Main Container Styles */
+
+.privacy-page {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: none;
+    
+  }
+  
+  /* Table of Contents Sidebar */
+  .toc-sidebar {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .toc-sidebar.sticky {
+    position: sticky;
+    top: 20px;
+  }
+  
+  .toc-list {
+    padding: 0;
+  }
+  
+  .toc-list li {
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .toc-list li:hover {
+    border-left-color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+  }
+  
+  .toc-list li a {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .toc-list li a:hover {
+    color: #0d6efd;
+  }
+  
+  .toc-list li ul {
+    padding-left: 20px;
+    list-style-type: none;
+  }
+  
+  /* Section Headers */
+  .section-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .section-header:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+  }
+  
+  .section-header i {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Cookie Consent Banner */
+  .cookie-consent {
+    position: fixed;
+    display: inline-block;
+    bottom: 0px;
+    left: 20px;
+    right: 20px;
+    background-color: #0d6efd;
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cookie-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cookie-buttons button {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .cookie-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cookie-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 10px 10px;
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Social Media Icons */
+  .social-media-icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .social-icon:hover {
+    background-color: #0d6efd;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  /* Cookie Types Cards */
+  .cookie-types {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cookie-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid #0d6efd;
+  }
+  
+  .cookie-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Data Use Items */
+  .data-use-item {
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+  }
+  
+  .data-use-item:hover {
+    border-left-color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+    transform: translateX(5px);
+  }
+  
+  /* Info Cards */
+  .info-card {
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(13, 110, 253, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  /* Contact Card */
+  .contact-card {
+    transition: all 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info {
+    padding: 15px;
+  }
+  
+  .contact-form {
+    padding: 15px;
+    border-left: 1px solid #dee2e6;
+  }
+  
+  @media (max-width: 767.98px) {
+    .contact-form {
+      border-left: none;
+      border-top: 1px solid #dee2e6;
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+  }
+  
+  /* Privacy Footer */
+  .privacy-footer {
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .privacy-actions {
+    margin-top: 15px;
+  }
+  
+  /* Share Buttons */
+  .share-buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .share-buttons button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Highlight Card */
+  .highlight-card {
+    border-left: 4px solid #0d6efd;
+    background-color: rgba(13, 110, 253, 0.03);
+  }
+  
+  /* Animation Classes */
+  .section-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .section-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991.98px) {
+    .toc-sidebar {
+      display: none;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .cookie-consent,
+    .back-to-top,
+    .contact-form,
+    .privacy-actions,
+    .toc-sidebar {
+      display: none !important;
+    }
+    
+    .card {
+      box-shadow: none !important; 
+      border: 1px solid #dee2e6 !important;
+    }
+    
+    .section-header {
+      cursor: default;
+    }
+    
+    .section-header i {
+      display: none;
+    }
+    .cookie-consent p{
+      color: white !important;
+    }
+
+    /* Ensure all content is visible when printing */
+  }

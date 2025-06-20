@@ -74,15 +74,19 @@
         </div>
         <div class="row bottom-ab-grids bg-white ">
             <div class="hny-three-grids py-5">
-                <div class="container py-lg-5">
+                <div class="container  py-lg-5">
                     <div class="row">
                       
-                        <div *ngFor="let destination of destinations" class="col-md-6 col-sm-6 grids5-info">
-                            <a href="#url">
-                                <img src={{destination.image}} class="img-fluid img-flood" alt="">
+                        <div *ngFor="let destination of destinations" class="col-md-6 col-sm-6 grids5-info hover">
+                            <a [routerLink]="['/countries', destination.countryCode]">
+                                <img [src]="destination.image" class="img-fluid img-flood" alt="">
                             </a>
                             <h5 class="sub-title">Study In</h5>
-                            <h4><a href="#url" class="hny-title">{{ destination.country }}</a></h4>
+                            <h4>
+                                <a [routerLink]="['/countries', destination.countryCode]" class="hny-title">
+                                    {{ destination.country }}
+                                </a>
+                            </h4>
                             <p>{{ destination.description }}</p>
                         </div>
                     </div>
